@@ -2,7 +2,8 @@
 
 ## I. Introduction
 
-In the history of professional sports, there has always been questions surrounding (home advantage)[https://en.wikipedia.org/wiki/Home_advantage]: Does it even exist? If so, what causes it?<br>
+In the history of professional sports, there has always been questions surrounding [home advantage](https://en.wikipedia.org/wiki/Home_advantage):<br>
+Does it even exist? If so, what causes it?<br>
 The three most commonly believed and cited factors are:<br>
 
 1. <b>Crowd involvement: The psychological effects of cheering and booing from fans.</b><br>
@@ -19,4 +20,4 @@ Since all basketball stadiums are indoors with standard dimensions, environmenta
 
 ## II. Methodology
 
-Data is mainly taken from (Basketball Reference)[https://www.basketball-reference.com/leagues/NBA_2021.html] before being explored and analyzed in Jupyter Notebooks.
+Data is mainly taken from [Basketball Reference](https://www.basketball-reference.com/leagues/NBA_2021.html) before being explored and analyzed in Jupyter Notebooks.
