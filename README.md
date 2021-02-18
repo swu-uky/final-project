@@ -18,6 +18,11 @@ Conversely, crowds generate as much noise as possible when the opposing team has
 
 Since all basketball stadiums are indoors with standard dimensions, environmental factors are naturally limited in the NBA. Outside of a few standalone factors, such as the high altitude in Denver, players can expect more or less the same environment every single game. Furthermore, due to the COVID-19 pandemic, the 2020-21 NBA Season saw the majority of teams either heavily limit or outright prohibit fan attendance. Thus, with two major factors essentially out of the equation, this project will use data and statistics from the season to see the effects of travel on home court advantage.
 
-## II. Methodology
+## II. Data
 
 Data is mainly taken from [Basketball Reference](https://www.basketball-reference.com/leagues/NBA_2021.html) before being explored and analyzed in Jupyter Notebooks.
+
+## III. Wireframe
+
+![Initial Wireframe](images/wireframe1.png)
+Very first wireframe draft using United Center in Chicago as an example.
