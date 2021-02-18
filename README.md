@@ -25,4 +25,5 @@ Data is mainly taken from [Basketball Reference](https://www.basketball-referenc
 ## III. Wireframe
 
 ![Initial Wireframe](images/wireframe1.png)
+
 Very first wireframe draft using United Center in Chicago as an example.
