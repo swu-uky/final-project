@@ -1,0 +1,83 @@
+Round Number,Date,Location,Home Team,Away Team,Home Score,Away Score
+1,17/10/2018 16:30,Madison Square Garden,New York Knicks,Atlanta Hawks,126,107
+1,19/10/2018 17:00,FedEx Forum,Memphis Grizzlies,Atlanta Hawks,131,117
+1,21/10/2018 15:00,Quicken Loans Arena,Cleveland Cavaliers,Atlanta Hawks,111,133
+1,24/10/2018 16:00,State Farm Arena,Atlanta Hawks,Dallas Mavericks,111,104
+2,27/10/2018 16:30,State Farm Arena,Atlanta Hawks,Chicago Bulls,85,97
+2,29/10/2018 16:00,Wells Fargo Center,Philadelphia 76ers,Atlanta Hawks,113,92
+2,30/10/2018 16:00,Quicken Loans Arena,Cleveland Cavaliers,Atlanta Hawks,136,114
+2,01/11/2018 16:30,State Farm Arena,Atlanta Hawks,Sacramento Kings,115,146
+3,03/11/2018 16:30,State Farm Arena,Atlanta Hawks,Miami Heat,123,118
+3,06/11/2018 16:00,Spectrum Center,Charlotte Hornets,Atlanta Hawks,113,102
+3,07/11/2018 16:30,State Farm Arena,Atlanta Hawks,New York Knicks,107,112
+4,09/11/2018 16:30,State Farm Arena,Atlanta Hawks,Detroit Pistons,109,124
+4,11/11/2018 18:30,Staples Center,Los Angeles Lakers,Atlanta Hawks,107,106
+4,13/11/2018 19:30,ORACLE Arena,Golden State Warriors,Atlanta Hawks,110,103
+5,15/11/2018 18:00,Pepsi Center,Denver Nuggets,Atlanta Hawks,138,93
+5,17/11/2018 16:00,Bankers Life Fieldhouse,Indiana Pacers,Atlanta Hawks,97,89
+5,19/11/2018 16:30,State Farm Arena,Atlanta Hawks,LA Clippers,119,127
+5,21/11/2018 16:30,State Farm Arena,Atlanta Hawks,Toronto Raptors,108,124
+6,23/11/2018 16:30,State Farm Arena,Atlanta Hawks,Boston Celtics,96,114
+6,25/11/2018 15:00,State Farm Arena,Atlanta Hawks,Charlotte Hornets,124,123
+6,27/11/2018 16:30,American Airlines Arena,Miami Heat,Atlanta Hawks,113,115
+6,28/11/2018 16:00,Spectrum Center,Charlotte Hornets,Atlanta Hawks,108,94
+7,30/11/2018 17:00,Chesapeake Energy Arena,Oklahoma City Thunder,Atlanta Hawks,124,109
+7,03/12/2018 16:30,State Farm Arena,Atlanta Hawks,Golden State Warriors,111,128
+7,05/12/2018 16:30,State Farm Arena,Atlanta Hawks,Washington Wizards,117,131
+8,08/12/2018 16:30,State Farm Arena,Atlanta Hawks,Denver Nuggets,106,98
+8,12/12/2018 17:30,American Airlines Center,Dallas Mavericks,Atlanta Hawks,114,107
+9,14/12/2018 16:00,TD Garden,Boston Celtics,Atlanta Hawks,129,108
+9,16/12/2018 12:00,Barclays Center,Brooklyn Nets,Atlanta Hawks,144,127
+9,18/12/2018 16:30,State Farm Arena,Atlanta Hawks,Washington Wizards,118,110
+10,21/12/2018 16:30,Madison Square Garden,New York Knicks,Atlanta Hawks,107,114
+10,23/12/2018 13:00,Little Caesars Arena,Detroit Pistons,Atlanta Hawks,95,98
+10,26/12/2018 16:30,State Farm Arena,Atlanta Hawks,Indiana Pacers,121,129
+11,28/12/2018 17:00,Target Center,Minnesota Timberwolves,Atlanta Hawks,120,123
+11,29/12/2018 16:30,State Farm Arena,Atlanta Hawks,Cleveland Cavaliers,111,108
+11,31/12/2018 12:00,Bankers Life Fieldhouse,Indiana Pacers,Atlanta Hawks,116,108
+11,02/01/2019 16:00,Capital One Arena,Washington Wizards,Atlanta Hawks,114,98
+12,04/01/2019 17:30,Fiserv Forum,Milwaukee Bucks,Atlanta Hawks,144,112
+12,06/01/2019 15:00,State Farm Arena,Atlanta Hawks,Miami Heat,106,82
+12,08/01/2019 16:30,Scotiabank Arena,Toronto Raptors,Atlanta Hawks,104,101
+12,09/01/2019 16:30,Barclays Center,Brooklyn Nets,Atlanta Hawks,116,100
+13,11/01/2019 16:00,Wells Fargo Center,Philadelphia 76ers,Atlanta Hawks,121,123
+13,13/01/2019 12:30,State Farm Arena,Atlanta Hawks,Milwaukee Bucks,114,133
+13,15/01/2019 16:30,State Farm Arena,Atlanta Hawks,Oklahoma City Thunder,142,126
+14,19/01/2019 16:30,State Farm Arena,Atlanta Hawks,Boston Celtics,105,113
+14,21/01/2019 12:00,State Farm Arena,Atlanta Hawks,Orlando Magic,103,122
+14,23/01/2019 17:00,United Center,Chicago Bulls,Atlanta Hawks,101,121
+15,26/01/2019 19:00,Moda Center,Portland Trail Blazers,Atlanta Hawks,120,111
+15,28/01/2019 19:30,Staples Center,LA Clippers,Atlanta Hawks,118,123
+15,30/01/2019 19:00,Golden 1 Center,Sacramento Kings,Atlanta Hawks,135,113
+16,01/02/2019 18:00,Vivint Smart Home Arena,Utah Jazz,Atlanta Hawks,128,112
+16,02/02/2019 18:00,Talking Stick Resort Arena,Phoenix Suns,Atlanta Hawks,112,118
+16,04/02/2019 16:00,Capital One Arena,Washington Wizards,Atlanta Hawks,129,137
+17,07/02/2019 16:30,State Farm Arena,Atlanta Hawks,Toronto Raptors,101,119
+17,09/02/2019 16:30,State Farm Arena,Atlanta Hawks,Charlotte Hornets,120,129
+17,10/02/2019 16:30,State Farm Arena,Atlanta Hawks,Orlando Magic,108,124
+17,12/02/2019 16:30,State Farm Arena,Atlanta Hawks,Los Angeles Lakers,117,113
+17,14/02/2019 16:30,State Farm Arena,Atlanta Hawks,New York Knicks,91,106
+18,22/02/2019 16:30,State Farm Arena,Atlanta Hawks,Detroit Pistons,122,125
+18,23/02/2019 16:00,State Farm Arena,Atlanta Hawks,Phoenix Suns,120,112
+18,25/02/2019 17:00,Toyota Center,Houston Rockets,Atlanta Hawks,119,111
+18,27/02/2019 16:30,State Farm Arena,Atlanta Hawks,Minnesota Timberwolves,131,123
+19,01/03/2019 16:30,State Farm Arena,Atlanta Hawks,Chicago Bulls,161,168
+19,03/03/2019 12:30,United Center,Chicago Bulls,Atlanta Hawks,118,123
+19,04/03/2019 16:30,American Airlines Arena,Miami Heat,Atlanta Hawks,114,113
+19,06/03/2019 16:30,State Farm Arena,Atlanta Hawks,San Antonio Spurs,104,111
+20,09/03/2019 16:00,State Farm Arena,Atlanta Hawks,Brooklyn Nets,112,114
+20,10/03/2019 15:00,State Farm Arena,Atlanta Hawks,New Orleans Pelicans,128,116
+20,13/03/2019 16:30,State Farm Arena,Atlanta Hawks,Memphis Grizzlies,132,111
+21,16/03/2019 09:30,TD Garden,Boston Celtics,Atlanta Hawks,129,120
+21,17/03/2019 15:00,Amway Center,Orlando Magic,Atlanta Hawks,101,91
+21,19/03/2019 16:30,State Farm Arena,Atlanta Hawks,Houston Rockets,105,121
+21,21/03/2019 16:30,State Farm Arena,Atlanta Hawks,Utah Jazz,117,114
+22,23/03/2019 16:30,State Farm Arena,Atlanta Hawks,Philadelphia 76ers,129,127
+22,26/03/2019 17:00,Smoothie King Center,New Orleans Pelicans,Atlanta Hawks,120,130
+23,29/03/2019 16:30,State Farm Arena,Atlanta Hawks,Portland Trail Blazers,98,118
+23,31/03/2019 09:30,State Farm Arena,Atlanta Hawks,Milwaukee Bucks,136,135
+23,02/04/2019 17:30,AT&T Center,San Antonio Spurs,Atlanta Hawks,117,111
+23,03/04/2019 16:30,State Farm Arena,Atlanta Hawks,Philadelphia 76ers,130,122
+24,05/04/2019 16:00,Amway Center,Orlando Magic,Atlanta Hawks,149,113
+24,07/04/2019 16:00,Fiserv Forum,Milwaukee Bucks,Atlanta Hawks,115,107
+24,10/04/2019 17:00,State Farm Arena,Atlanta Hawks,Indiana Pacers,134,135
