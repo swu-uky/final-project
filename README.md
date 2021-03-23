@@ -22,9 +22,10 @@ Since all basketball stadiums are indoors with standard dimensions, environmenta
 
 ### A. Data
 
-Data for the current season is mainly taken from [Basketball Reference](https://www.basketball-reference.com/leagues/NBA_2021.html).
-Previous season results are downloaded directly from [Fixture Download](https://fixturedownload.com/results/nba-2018).
-All data are processed in Jupyter Notebooks using primarily the pandas and geopandas libraries.
+Data for the current season was mainly taken from [Basketball Reference](https://www.basketball-reference.com/leagues/NBA_2021.html).<br>
+Previous season results were downloaded directly from [Fixture Download](https://fixturedownload.com/results/nba-2018).<br>
+Fixure Download data were first ran through Google Sheets for the "Split text to columns" feature.
+All data were then processed in Jupyter Notebooks using primarily the pandas and geopandas libraries.
 
 ### B. Medium for delivery
 
