@@ -11,7 +11,14 @@ var config = {
             title: 'HOME ADVANTAGE',
             description: `
                 <img src="./images/sports.jpg">
-                
+                <p>What is it?</p>
+                <p>In team sports, <i>home advantage</i> is the term used to describe the phenomenon that teams generally perform better
+                at home than on the road. For as long as there has been team sports, there has been debate on home advantage. Does it
+                really exist? If so, what causes it?</p>
+                <p>Let us start by exploring the three things most commonly believed to be factors:</p>
+                <p><i>1. Crowd Involvement<br>
+                2. Travel Considerations<br>
+                3. Environment</i></p>
                 `,
             location: {
                 center: [-108, 38],
@@ -36,7 +43,7 @@ var config = {
                 has the ball to try to disrupt communication.</p>
                 <p><i>Example: Lumen Field, home of the NFL team Seattle Seahawks, is notorious for its loud atmosphere. With the help of its
                 fanbase, the 12s, Seattle consistently leads the NFL in inducing false-start and delay-of-game penalties. From 2002-2012,
-                the Seahawks compiled a 59-29 record at home while going 33-55 on the road.</i></p>
+                the Seahawks compiled a 59-29 (67.0%) record at home while going 33-55 (37.5%) on the road.</i></p>
                 `,
             location: {
                 center: [-122.3266, 47.5952],
@@ -64,6 +71,11 @@ var config = {
             description: `
                 <img src="./images/clock.jpg">
                 <p>Secondly, the physical effects of travel fatigue and time difference play a significant role.</p>
+                <p>A traveling team is limited to hotel acccomadations while the home team has all the luxuries of players' own
+                homes. No bed is ever as comfortable as your own, especially compounded with getting on and off planes or buses.</p>
+                <p><i>Example: Any eastern team traveling to compete in the west. The United States, as shown on the right, has
+                four primary time zones, altering the time during these trips by up to three hours. By the time the game ends,
+                players' internal clocks may be well past their bedtimes.</i></p>
                 `,
             location: {
                 center: [-108, 38],
@@ -87,7 +99,7 @@ var config = {
         {
             id: 'fourth',
             alignment: 'right',
-            title: '3. ENVIRONMENTAL FACTORS',
+            title: '3. ENVIRONMENT',
             description: `
                 <img src="./images/coors.jpg">
                 <p>Lastly, the familiarity of the environment rounds out the three major ingredients of home advantage.</p>
@@ -115,6 +127,27 @@ var config = {
                     opacity: 0
                 }
             ]
+        },
+        {
+            id: 'fifth',
+            alignment: 'left',
+            title: 'PANDEMIC BASKETBALL',
+            description: `
+                <p>Since all basketball stadiums are indoors with standard dimensions, environmental factors are naturally limited in the
+                NBA. For the most part, players can expect more or less the same atmosphere every single game. Furthermore, due to the
+                COVID-19 pandemic, the 2020-21 NBA Season saw the majority of the team either heavily limit or outright prohibit fan
+                attendance. Thus, with two major factors essentially out of the equation this project will use data and statistics to see
+                the effects of travel on home court advantage.</p>
+                <p><i>Let's get started!</i></p>                
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
         }
     ]
 };
