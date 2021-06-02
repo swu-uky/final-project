@@ -148,6 +148,456 @@ var config = {
             },
             onChapterEnter: [],
             onChapterExit: []
+        },
+        {
+            id: 'atl',
+            alignment: 'left',
+            title: 'ATLANTA HAWKS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'bos',
+            alignment: 'left',
+            title: 'BOSTON CELTICS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'bkn',
+            alignment: 'left',
+            title: 'BROOKLYN NETS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'cha',
+            alignment: 'left',
+            title: 'CHARLOTTE HORNETS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'cle',
+            alignment: 'left',
+            title: 'CLEVELAND CAVALIERS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'det',
+            alignment: 'left',
+            title: 'DETROIT PISTONS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'ind',
+            alignment: 'left',
+            title: 'INDIANA PACERS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'mia',
+            alignment: 'left',
+            title: 'MIAMI HEAT',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'ny',
+            alignment: 'left',
+            title: 'NEW YORK KNICKS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'orl',
+            alignment: 'left',
+            title: 'ORLANDO MAGIC',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'phi',
+            alignment: 'left',
+            title: 'PHILADELPHIA 76ERS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'tor',
+            alignment: 'left',
+            title: 'TORONTO RAPTORS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'was',
+            alignment: 'left',
+            title: 'WASHINGTON WIZARDS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'chi',
+            alignment: 'left',
+            title: 'CHICAGO BULLS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'dal',
+            alignment: 'left',
+            title: 'DALLAS MAVERICKS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'hou',
+            alignment: 'left',
+            title: 'HOUSTON ROCKETS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'mem',
+            alignment: 'left',
+            title: 'MEMPHIS GRIZZLIES',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'mil',
+            alignment: 'left',
+            title: 'MILWAUKEE BUCKS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'min',
+            alignment: 'left',
+            title: 'MINNESOTA TIMBERWOLVES',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'no',
+            alignment: 'left',
+            title: 'NEW ORLEANS PELICANS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'okc',
+            alignment: 'left',
+            title: 'OKLAHOMA CITY THUNDER',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'sa',
+            alignment: 'left',
+            title: 'SAN ANTONIO SPURS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'den',
+            alignment: 'left',
+            title: 'DENVER NUGGETS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'pho',
+            alignment: 'left',
+            title: 'PHOENIX SUNS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'uta',
+            alignment: 'left',
+            title: 'UTAH JAZZ',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'gs',
+            alignment: 'left',
+            title: 'GOLDEN STATE WARRIORS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'lac',
+            alignment: 'left',
+            title: 'LOS ANGELES CLIPPERS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'lal',
+            alignment: 'left',
+            title: 'LOS ANGELES LAKERS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'por',
+            alignment: 'left',
+            title: 'PORTLAND TRAIL BLAZERS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'sac',
+            alignment: 'left',
+            title: 'SACRAMENTO KINGS',
+            description: `            
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [],
+            onChapterExit: []
         }
     ]
 };
