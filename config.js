@@ -51,18 +51,14 @@ var config = {
                 pitch: 64,
                 bearing: -32
             },
-            onChapterEnter: [
-                {
-                    layer: 'lumen-field',
-                    opacity: 0.5
-                },
-            ],
-            onChapterExit: [
-                {
-                    layer: 'lumen-field',
-                    opacity: 0
-                }
-            ]
+            onChapterEnter: [{
+                layer: 'lumen-field',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'lumen-field',
+                opacity: 0
+            }]
         },
         {
             id: 'third',
@@ -83,18 +79,14 @@ var config = {
                 pitch: 0,
                 bearing: 0
             },
-            onChapterEnter: [
-                {
-                    layer: 'time-zones',
-                    opacity: 0.5
-                },
-            ],
-            onChapterExit: [
-                {
-                    layer: 'time-zones',
-                    opacity: 0
-                }
-            ]
+            onChapterEnter: [{
+                layer: 'time-zones',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'time-zones',
+                opacity: 0
+            }]
         },
         {
             id: 'fourth',
@@ -115,18 +107,14 @@ var config = {
                 pitch: 64,
                 bearing: 8
             },
-            onChapterEnter: [
-                {
-                    layer: 'coors-field',
-                    opacity: 0.5
-                },
-            ],
-            onChapterExit: [
-                {
-                    layer: 'coors-field',
-                    opacity: 0
-                }
-            ]
+            onChapterEnter: [{
+                layer: 'coors-field',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'coors-field',
+                opacity: 0
+            }]
         },
         {
             id: 'fifth',
@@ -153,451 +141,655 @@ var config = {
             id: 'atl',
             alignment: 'left',
             title: 'ATLANTA HAWKS',
-            description: `            
+            description: `
+                State Farm Arena            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-84.3963, 33.7573],
+                zoom: 17,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'state-farm-arena',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'state-farm-arena',
+                opacity: 0
+            }]
         },
         {
             id: 'bos',
             alignment: 'left',
             title: 'BOSTON CELTICS',
-            description: `            
+            description: `
+                TD Garden            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-71.0621, 42.3662],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'td-garden',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'td-garden',
+                opacity: 0
+            }]
         },
         {
             id: 'bkn',
             alignment: 'left',
             title: 'BROOKLYN NETS',
-            description: `            
+            description: `
+                Barclays Center            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-73.9754, 40.6826],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'barclays-center',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'barclays-center',
+                opacity: 0
+            }]
         },
         {
             id: 'cha',
             alignment: 'left',
             title: 'CHARLOTTE HORNETS',
-            description: `            
+            description: `
+                Spectrum Center
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-80.8394, 35.2252],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'spectrum-center',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'spectrum-center',
+                opacity: 0
+            }]
         },
         {
             id: 'cle',
             alignment: 'left',
             title: 'CLEVELAND CAVALIERS',
-            description: `            
+            description: `
+                Rocket Mortgage Fieldhouse                
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-81.6881, 41.4966],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'rocket-mortgage-fieldhouse',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'rocket-mortgage-fieldhouse',
+                opacity: 0
+            }]
         },
         {
             id: 'det',
             alignment: 'left',
             title: 'DETROIT PISTONS',
-            description: `            
+            description: `
+                Little Caesars Arena            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-83.0553, 42.3411],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'little-caesars-arena',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'little-caesars-arena',
+                opacity: 0
+            }]
         },
         {
             id: 'ind',
             alignment: 'left',
             title: 'INDIANA PACERS',
-            description: `            
+            description: `
+                Bankers Life Fieldhouse            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-86.1555, 39.7640],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'bankers-life-fieldhouse',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'bankers-life-fieldhouse',
+                opacity: 0
+            }]
         },
         {
             id: 'mia',
             alignment: 'left',
             title: 'MIAMI HEAT',
-            description: `            
+            description: `
+                American Airlines Arena            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-80.1870, 25.7814],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'american-airlines-arena',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'american-airlines-arena',
+                opacity: 0
+            }]
         },
         {
             id: 'ny',
             alignment: 'left',
             title: 'NEW YORK KNICKS',
-            description: `            
+            description: `
+                Madison Square Garden            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-73.9934, 40.7505],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'madison-square-garden',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'madison-square-garden',
+                opacity: 0
+            }]
         },
         {
             id: 'orl',
             alignment: 'left',
             title: 'ORLANDO MAGIC',
-            description: `            
+            description: `
+                Amway Center            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-81.3839, 28.5392],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'amway-center',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'amway-center',
+                opacity: 0
+            }]
         },
         {
             id: 'phi',
             alignment: 'left',
             title: 'PHILADELPHIA 76ERS',
-            description: `            
+            description: `
+                Wells Fargo Center            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-75.1720, 39.9012],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'wells-fargo-center',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'wells-fargo-center',
+                opacity: 0
+            }]
         },
         {
             id: 'tor',
             alignment: 'left',
             title: 'TORONTO RAPTORS',
-            description: `            
+            description: `
+                Scotiabank Arena            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-79.3791, 43.6435],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'scotiabank-arena',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'scotiabank-arena',
+                opacity: 0
+            }]
         },
         {
             id: 'was',
             alignment: 'left',
             title: 'WASHINGTON WIZARDS',
-            description: `            
+            description: `
+                Capital One Arena            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-77.0208, 38.8981],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'capital-one-arena',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'capital-one-arena',
+                opacity: 0
+            }]
         },
         {
             id: 'chi',
             alignment: 'left',
             title: 'CHICAGO BULLS',
-            description: `            
+            description: `
+                United Center            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-87.6742, 41.8807],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'united-center',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'united-center',
+                opacity: 0
+            }]
         },
         {
             id: 'dal',
             alignment: 'left',
             title: 'DALLAS MAVERICKS',
-            description: `            
+            description: `
+                American Airlines Center            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-96.8103, 32.7904],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'american-airlines-center',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'american-airlines-center',
+                opacity: 0
+            }]
         },
         {
             id: 'hou',
             alignment: 'left',
             title: 'HOUSTON ROCKETS',
-            description: `            
+            description: `
+                Toyota Center            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-95.3621, 29.7508],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'toyota-center',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'toyota-center',
+                opacity: 0
+            }]
         },
         {
             id: 'mem',
             alignment: 'left',
             title: 'MEMPHIS GRIZZLIES',
-            description: `            
+            description: `
+                FedEx Forum            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-90.0506, 35.1381],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'fedex-forum',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'fedex-forum',
+                opacity: 0
+            }]
         },
         {
             id: 'mil',
             alignment: 'left',
             title: 'MILWAUKEE BUCKS',
-            description: `            
+            description: `
+                Fiserv Forum            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-87.9174, 43.0451],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'fiserv-forum',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'fiserv-forum',
+                opacity: 0
+            }]
         },
         {
             id: 'min',
             alignment: 'left',
             title: 'MINNESOTA TIMBERWOLVES',
-            description: `            
+            description: `
+                Target Center            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-93.2761, 44.9795],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'target-center',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'target-center',
+                opacity: 0
+            }]
         },
         {
             id: 'no',
             alignment: 'left',
             title: 'NEW ORLEANS PELICANS',
-            description: `            
+            description: `
+                Smoothie King Center            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-90.0821, 29.9490],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'smoothie-king-center',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'smoothie-king-center',
+                opacity: 0
+            }]
         },
         {
             id: 'okc',
             alignment: 'left',
             title: 'OKLAHOMA CITY THUNDER',
-            description: `            
+            description: `
+                Chesapeake Energy Arena            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-97.5151, 35.4634],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'chesapeake-energy-arena',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'chesapeake-energy-arena',
+                opacity: 0
+            }]
         },
         {
             id: 'sa',
             alignment: 'left',
             title: 'SAN ANTONIO SPURS',
-            description: `            
+            description: `
+                AT&T Center            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-98.4375, 29.4270],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'att-center',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'att-center',
+                opacity: 0
+            }]
         },
         {
             id: 'den',
             alignment: 'left',
             title: 'DENVER NUGGETS',
-            description: `            
+            description: `
+                Ball Arena            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-105.0076, 39.7487],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'ball-arena',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'ball-arena',
+                opacity: 0
+            }]
         },
         {
             id: 'pho',
             alignment: 'left',
             title: 'PHOENIX SUNS',
-            description: `            
+            description: `
+                Phoenix Suns Arena            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-112.0712, 33.4457],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'phoenix-suns-arena',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'phoenix-suns-arena',
+                opacity: 0
+            }]
         },
         {
             id: 'uta',
             alignment: 'left',
             title: 'UTAH JAZZ',
-            description: `            
+            description: `
+                Vivint Arena            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-111.9011, 40.7683],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'vivint-arena',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'vivint-arena',
+                opacity: 0
+            }]
         },
         {
             id: 'gs',
             alignment: 'left',
             title: 'GOLDEN STATE WARRIORS',
-            description: `            
+            description: `
+                Chase Center            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-122.3877, 37.7680],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'chase-center',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'chase-center',
+                opacity: 0
+            }]
         },
         {
             id: 'lac',
             alignment: 'left',
             title: 'LOS ANGELES CLIPPERS',
-            description: `            
+            description: `
+                Staples Center            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-118.2673, 34.0430],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
+            onChapterEnter: [{
+                layer: 'staples-center',
+                opacity: 0.5
+            }, ],
             onChapterExit: []
         },
         {
             id: 'lal',
             alignment: 'left',
             title: 'LOS ANGELES LAKERS',
-            description: `            
+            description: `
+                Staples Center            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-118.2673, 34.0430],
+                zoom: 16,
+                pitch: 64,
+                bearing: -8
             },
             onChapterEnter: [],
-            onChapterExit: []
+            onChapterExit: [{
+                layer: 'staples-center',
+                opacity: 0
+            }]
         },
         {
             id: 'por',
             alignment: 'left',
             title: 'PORTLAND TRAIL BLAZERS',
-            description: `            
+            description: `
+                Moda Center            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-122.6668, 45.5316],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'moda-center',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'moda-center',
+                opacity: 0
+            }]
         },
         {
             id: 'sac',
             alignment: 'left',
             title: 'SACRAMENTO KINGS',
-            description: `            
+            description: `
+                Golden 1 Center            
                 `,
             location: {
-                center: [-108, 38],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-121.4997, 38.5802],
+                zoom: 16,
+                pitch: 64,
+                bearing: 8
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'golden-1-center',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'golden-1-center',
+                opacity: 0
+            }]
         }
     ]
 };
