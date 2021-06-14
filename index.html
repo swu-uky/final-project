@@ -121,6 +121,26 @@
             width: 100%;
         }
 
+        table,
+        th,
+        td {
+            border: 1px solid white;
+            padding: 10px;
+        }
+
+        #t tr:nth-child(even) {
+            background-color: black;
+        }
+
+        #t tr:nth-child(odd) {
+            background-color: gray;
+        }
+
+        #t th {
+            color: white;
+            background-color: darkgoldenrod;
+        }
+
         @media (max-width: 750px) {
 
             .centered,
@@ -141,7 +161,6 @@
 </head>
 
 <body>
-
     <div id="map"></div>
     <div id="story"></div>
 

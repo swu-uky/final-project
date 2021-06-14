@@ -16,23 +16,64 @@ Conversely, crowds generate as much noise as possible when the opposing team has
 3. <b>Environmental factors: The familiarity of the environment (eg. weather, altitude).</b><br>
 <i>Example: In baseball, every stadium has different dimensions, giving the home team a slight advantage via the familiarity of their own park.</i>
 
-Since all basketball stadiums are indoors with standard dimensions, environmental factors are naturally limited in the NBA. Outside of a few standalone factors, such as the high altitude in Denver, players can expect more or less the same environment every single game. Furthermore, due to the COVID-19 pandemic, the 2020-21 NBA Season saw the majority of teams either heavily limit or outright prohibit fan attendance. Thus, with two major factors essentially out of the equation, this project will use data and statistics from the season to see the effects of travel on home court advantage.
+Since all basketball stadiums are indoors with standard dimensions, environmental factors are naturally limited in the NBA. Outside of a few standalone factors, such as the high altitude in Denver, players can expect more or less the same environment every single game. Furthermore, due to the COVID-19 pandemic, the 2020-21 NBA Season saw the majority of teams either heavily limit or outright prohibit fan attendance. Thus, with two major factors essentially out of the equation, this project will use data and statistics from the season to see the effects of travel on home court advantage. This will then be compared with 2018-19 numbers to extrapolate the effects of crowd involvement.
 
 ## II. Methodology
 
 ### A. Data
 
-Data for the current season was mainly taken from [Basketball Reference](https://www.basketball-reference.com/leagues/NBA_2021.html).<br>
-Previous season results were downloaded directly from [Fixture Download](https://fixturedownload.com/results/nba-2018).<br>
-Fixure Download data were first ran through Google Sheets for the "Split text to columns" feature.
-All data were then processed in Jupyter Notebooks using primarily the pandas and geopandas libraries.
+#### Raw
 
-### B. Medium for delivery
+Both seasons' results are downloaded directly from [Fixture Download](https://fixturedownload.com/sport/basketball).<br>
+Fixure Download data are first ran through Google Sheets for the "Split text to columns" feature. This splits the original "Result" column into two columns
+("Home Score" and "Away Score") for better manipulation. All data are then processed in Jupyter Notebooks using primarily the pandas and geopandas libraries.
 
-This map is a web browser-based application accessible across desktop devices. It will operate on a baseline of HTML/CSS/JS with the Leaflet library. A Mapbox storytelling template is used for an interactive introduction.
+The main statistics in focus are points scored by the home team and points scored by the away team. The main calculation revolves around differential. Due to the nature of the NBA,
+every season sees different teams in the top and bottom of the standings. Therefore, raw points numbers and win/loss records are not good indicators when comparing across different seasons.
+A better team will be expected to score more points and win more games than a rebuilding one, regardless of home or away. Differentials compares a team's home performances to their
+away performances. In other words, a good team may win both at home and on the road, but only winning by a bigger margin at home will count towards a home court advantage.
+Likewise, even if a rebuilding team loses at home and away, if the games are closer at home, then there are still signs of an advantage.
+
+#### Mapbox Studio
+
+The layers included in the Mapbox interface are all mostly done by hand. After 29 building polygons (one for each NBA arena) are duplicated from the base layer,
+each layer is filtered to only include the polygons of the venue it is representing. As the user scrolls, the layers turn on and off via opacity.
+
+The two exceptions are:
+
+1. The Time Zones layer.
+
+The data is taken from [USDOT](https://data-usdot.opendata.arcgis.com/datasets/usdot::time-zones/about). The shapefile is directly loaded to Mapbox Studio.
+
+2. The Venues layer.
+
+The data is obtained from [HIFLD](https://hifld-geoplatform.opendata.arcgis.com/datasets/geoplatform::major-sport-venues/about). The data is processed in a Jupyter Notebook with its
+CRS changed in QGIS to convert its original meters unit to degrees. The final geojson is then uploaded to Mapbox Studio.
+
+### B. Medium for Delivery / User Interaction
+
+This map is a web browser-based application accessible across desktop devices. It will operate on a baseline of HTML/CSS/JS using the Mapbox storytelling feature.
+Mapbox's introduction to interactive storytelling can be found [here](https://www.mapbox.com/solutions/interactive-storytelling).
+
+Due to the nature of storytelling, the user cannot interact with the map directly. The story chapters are predetermined and laid out for the user to simply scroll through.
+It starts off with the overall background of the project and continues on a journey through NBA teams one by one. It is geared for sports enthusiasts who will understand
+the numbers and highlights presented.
 
 ### C. Application Layout
 
 ![Initial Wireframe](images/wireframe1.png)
 
-Very first wireframe draft using United Center in Chicago as an example.
+Figure 1. The very first wireframe draft using United Center in Chicago as an example.
+
+![Finalized Look](images/wirefram2.png)
+
+Figure 2. The finalized look of Chicago's information box.
+
+### D. Aesthetics
+
+The color scheme reflects a simple grayscale design. The team's home building's polygon is highlighted in green when the user scrolls to the it. This is to set it apart from
+the buildings around it to better accentuate its features.
+
+All logos are courtesy of [Logos World](https://logos-world.net/).
+
+### E. Conclusion

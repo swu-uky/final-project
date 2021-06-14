@@ -32,7 +32,7 @@ var config = {
         },
         {
             id: 'second',
-            alignment: 'right',
+            alignment: 'left',
             title: '1. CROWD INVOLVEMENT',
             description: `
                 <img src="./images/lumen.jpg">
@@ -46,10 +46,10 @@ var config = {
                 the Seahawks compiled a 59-29 (67.0%) record at home while going 33-55 (37.5%) on the road.</i></p>
                 `,
             location: {
-                center: [-122.3266, 47.5952],
-                zoom: 16,
+                center: [-122.3331, 47.5969],
+                zoom: 16.5,
                 pitch: 64,
-                bearing: -32
+                bearing: 64
             },
             onChapterEnter: [{
                 layer: 'lumen-field',
@@ -90,7 +90,7 @@ var config = {
         },
         {
             id: 'fourth',
-            alignment: 'right',
+            alignment: 'left',
             title: '3. ENVIRONMENT',
             description: `
                 <img src="./images/coors.jpg">
@@ -102,8 +102,8 @@ var config = {
                 From 2012-2015, the Rockies were first in the league in runs scored at home but came in last for runs scored on the road.</i></p>
                 `,
             location: {
-                center: [-104.9917, 39.7559],
-                zoom: 16,
+                center: [-104.9959, 39.7559],
+                zoom: 16.5,
                 pitch: 64,
                 bearing: 8
             },
@@ -121,6 +121,7 @@ var config = {
             alignment: 'left',
             title: 'PANDEMIC BASKETBALL',
             description: `
+                <img src="./images/nba.png">
                 <p>Since all basketball stadiums are indoors with standard dimensions, environmental factors are naturally limited in the
                 NBA. For the most part, players can expect more or less the same atmosphere every single game. Furthermore, due to the
                 COVID-19 pandemic, the 2020-21 NBA Season saw the majority of the team either heavily limit or outright prohibit fan
@@ -134,19 +135,84 @@ var config = {
                 pitch: 0,
                 bearing: 0
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [{
+                layer: 'venues',
+                opacity: 1
+            }, ],
+            onChapterExit: [{
+                layer: 'venues',
+                opacity: 0
+            }]
         },
         {
             id: 'atl',
             alignment: 'left',
             title: 'ATLANTA HAWKS',
             description: `
-                State Farm Arena            
+                Venue: State Farm Arena<br>
+                Time Zone: Eastern
+                <img src="./images/hawks.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>- 4.02</td>
+                  <td>- 8.02</td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 6.33</td>
+                  <td>- 1.69</td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 14.40</td>
+                  <td>- 6.80</td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>+ 6.20</td>
+                  <td>+ 0.80</td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 6.33</td>
+                  <td>- 18.33</td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>+ 6.33</td>
+                  <td>- 18.33</td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 0.36</td>
+                  <td>- 4.73</td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 5.73</td>
+                  <td>+ 7.11</td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>- 5.27</td>
+                  <td>- 8.55</td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 6.76</td>
+                  <td>- 3.89</td>
+                </tr>
+              </table>
                 `,
             location: {
                 center: [-84.3963, 33.7573],
-                zoom: 17,
+                zoom: 16.5,
                 pitch: 64,
                 bearing: 8
             },
@@ -164,13 +230,14 @@ var config = {
             alignment: 'left',
             title: 'BOSTON CELTICS',
             description: `
-                TD Garden            
+                TD Garden
+                <img src="./images/celtics.png">            
                 `,
             location: {
                 center: [-71.0621, 42.3662],
-                zoom: 16,
+                zoom: 16.5,
                 pitch: 64,
-                bearing: 8
+                bearing: -24
             },
             onChapterEnter: [{
                 layer: 'td-garden',
@@ -186,13 +253,14 @@ var config = {
             alignment: 'left',
             title: 'BROOKLYN NETS',
             description: `
-                Barclays Center            
+                Barclays Center
+                <img src="./images/nets.png">            
                 `,
             location: {
-                center: [-73.9754, 40.6826],
-                zoom: 16,
-                pitch: 64,
-                bearing: 8
+                center: [-73.9779, 40.6826],
+                zoom: 16.5,
+                pitch: 32,
+                bearing: 24
             },
             onChapterEnter: [{
                 layer: 'barclays-center',
@@ -209,10 +277,11 @@ var config = {
             title: 'CHARLOTTE HORNETS',
             description: `
                 Spectrum Center
+                <img src="./images/hornets.png">
                 `,
             location: {
                 center: [-80.8394, 35.2252],
-                zoom: 16,
+                zoom: 16.5,
                 pitch: 64,
                 bearing: 8
             },
@@ -230,13 +299,14 @@ var config = {
             alignment: 'left',
             title: 'CLEVELAND CAVALIERS',
             description: `
-                Rocket Mortgage Fieldhouse                
+                Rocket Mortgage Fieldhouse
+                <img src="./images/cavaliers.png">                
                 `,
             location: {
-                center: [-81.6881, 41.4966],
-                zoom: 16,
+                center: [-81.6881, 41.4981],
+                zoom: 16.5,
                 pitch: 64,
-                bearing: 8
+                bearing: 64
             },
             onChapterEnter: [{
                 layer: 'rocket-mortgage-fieldhouse',
@@ -252,11 +322,12 @@ var config = {
             alignment: 'left',
             title: 'DETROIT PISTONS',
             description: `
-                Little Caesars Arena            
+                Little Caesars Arena
+                <img src="./images/pistons.png">            
                 `,
             location: {
-                center: [-83.0553, 42.3411],
-                zoom: 16,
+                center: [-83.0573, 42.3411],
+                zoom: 16.5,
                 pitch: 64,
                 bearing: 8
             },
@@ -274,11 +345,12 @@ var config = {
             alignment: 'left',
             title: 'INDIANA PACERS',
             description: `
-                Bankers Life Fieldhouse            
+                Bankers Life Fieldhouse
+                <img src="./images/pacers.png">            
                 `,
             location: {
-                center: [-86.1555, 39.7640],
-                zoom: 16,
+                center: [-86.1575, 39.7640],
+                zoom: 16.5,
                 pitch: 64,
                 bearing: 8
             },
@@ -296,13 +368,14 @@ var config = {
             alignment: 'left',
             title: 'MIAMI HEAT',
             description: `
-                American Airlines Arena            
+                American Airlines Arena
+                <img src="./images/heat.png">            
                 `,
             location: {
-                center: [-80.1870, 25.7814],
-                zoom: 16,
+                center: [-80.1870, 25.7799],
+                zoom: 16.5,
                 pitch: 64,
-                bearing: 8
+                bearing: -64
             },
             onChapterEnter: [{
                 layer: 'american-airlines-arena',
@@ -318,13 +391,14 @@ var config = {
             alignment: 'left',
             title: 'NEW YORK KNICKS',
             description: `
-                Madison Square Garden            
+                Madison Square Garden
+                <img src="./images/knicks.png">            
                 `,
             location: {
-                center: [-73.9934, 40.7505],
-                zoom: 16,
-                pitch: 64,
-                bearing: 8
+                center: [-73.9955, 40.7505],
+                zoom: 16.5,
+                pitch: 32,
+                bearing: 0
             },
             onChapterEnter: [{
                 layer: 'madison-square-garden',
@@ -340,11 +414,12 @@ var config = {
             alignment: 'left',
             title: 'ORLANDO MAGIC',
             description: `
-                Amway Center            
+                Amway Center
+                <img src="./images/magic.png">            
                 `,
             location: {
-                center: [-81.3839, 28.5392],
-                zoom: 16,
+                center: [-81.3850, 28.5392],
+                zoom: 16.5,
                 pitch: 64,
                 bearing: 8
             },
@@ -362,13 +437,14 @@ var config = {
             alignment: 'left',
             title: 'PHILADELPHIA 76ERS',
             description: `
-                Wells Fargo Center            
+                Wells Fargo Center
+                <img src="./images/76ers.png">            
                 `,
             location: {
-                center: [-75.1720, 39.9012],
-                zoom: 16,
-                pitch: 64,
-                bearing: 8
+                center: [-75.1730, 39.9009],
+                zoom: 16.5,
+                pitch: 32,
+                bearing: -32
             },
             onChapterEnter: [{
                 layer: 'wells-fargo-center',
@@ -384,11 +460,12 @@ var config = {
             alignment: 'left',
             title: 'TORONTO RAPTORS',
             description: `
-                Scotiabank Arena            
+                Scotiabank Arena
+                <img src="./images/raptors.png">            
                 `,
             location: {
-                center: [-79.3791, 43.6435],
-                zoom: 16,
+                center: [-79.3808, 43.6435],
+                zoom: 16.5,
                 pitch: 64,
                 bearing: 8
             },
@@ -406,13 +483,14 @@ var config = {
             alignment: 'left',
             title: 'WASHINGTON WIZARDS',
             description: `
-                Capital One Arena            
+                Capital One Arena
+                <img src="./images/wizards.png">            
                 `,
             location: {
-                center: [-77.0208, 38.8981],
-                zoom: 16,
+                center: [-77.0208, 38.8966],
+                zoom: 16.5,
                 pitch: 64,
-                bearing: 8
+                bearing: -64
             },
             onChapterEnter: [{
                 layer: 'capital-one-arena',
@@ -428,11 +506,81 @@ var config = {
             alignment: 'left',
             title: 'CHICAGO BULLS',
             description: `
-                United Center            
+                Venue: United Center<br>
+                Time Zone: Central
+                <img src="./images/bulls.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>- 9.80</td>
+                  <td>- 7.02</td>
+                  <td><b style="color:lightcoral">- 2.78</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>- 1.69</td>
+                  <td>- 0.08</td>
+                  <td><b style="color:lightcoral">- 1.61</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 17.00</td>
+                  <td>- 18.00</td>
+                  <td><b style="color:greenyellow">+ 1.00</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 4.80</td>
+                  <td>- 4.00</td>
+                  <td><b style="color:lightcoral">- 0.80</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>- 8.00</td>
+                  <td>- 7.67</td>
+                  <td><b style="color:lightcoral">- 0.33</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>- 13.33</td>
+                  <td>- 5.33</td>
+                  <td><b style="color:lightcoral">- 8.00</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>- 6.00</td>
+                  <td>- 9.56</td>
+                  <td><b style="color:greenyellow">+ 3.56</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 3.78</td>
+                  <td>- 2.88</td>
+                  <td><b style="color:greenyellow">+ 6.66</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>- 9.96</td>
+                  <td>- 3.71</td>
+                  <td><b style="color:lightcoral">- 6.51</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>- 1.63</td>
+                  <td>+ 2.80</td>
+                  <td><b style="color:lightcoral">- 4.43</b></td>
+                </tr>
+              </table>            
                 `,
             location: {
-                center: [-87.6742, 41.8807],
-                zoom: 16,
+                center: [-87.6767, 41.8807],
+                zoom: 16.5,
                 pitch: 64,
                 bearing: 8
             },
@@ -450,13 +598,14 @@ var config = {
             alignment: 'left',
             title: 'DALLAS MAVERICKS',
             description: `
-                American Airlines Center            
+                American Airlines Center
+                <img src="./images/mavericks.png">            
                 `,
             location: {
-                center: [-96.8103, 32.7904],
-                zoom: 16,
+                center: [-96.8111, 32.7922],
+                zoom: 16.5,
                 pitch: 64,
-                bearing: 8
+                bearing: 64
             },
             onChapterEnter: [{
                 layer: 'american-airlines-center',
@@ -472,11 +621,12 @@ var config = {
             alignment: 'left',
             title: 'HOUSTON ROCKETS',
             description: `
-                Toyota Center            
+                Toyota Center
+                <img src="./images/rockets.png">            
                 `,
             location: {
-                center: [-95.3621, 29.7508],
-                zoom: 16,
+                center: [-95.3636, 29.7508],
+                zoom: 16.5,
                 pitch: 64,
                 bearing: 8
             },
@@ -494,13 +644,14 @@ var config = {
             alignment: 'left',
             title: 'MEMPHIS GRIZZLIES',
             description: `
-                FedEx Forum            
+                FedEx Forum
+                <img src="./images/grizzlies.png">            
                 `,
             location: {
-                center: [-90.0506, 35.1381],
-                zoom: 16,
+                center: [-90.0522, 35.1395],
+                zoom: 16.5,
                 pitch: 64,
-                bearing: 8
+                bearing: 64
             },
             onChapterEnter: [{
                 layer: 'fedex-forum',
@@ -516,13 +667,14 @@ var config = {
             alignment: 'left',
             title: 'MILWAUKEE BUCKS',
             description: `
-                Fiserv Forum            
+                Fiserv Forum
+                <img src="./images/bucks.png">            
                 `,
             location: {
-                center: [-87.9174, 43.0451],
-                zoom: 16,
+                center: [-87.9191, 43.0451],
+                zoom: 16.5,
                 pitch: 64,
-                bearing: 8
+                bearing: -32
             },
             onChapterEnter: [{
                 layer: 'fiserv-forum',
@@ -538,11 +690,12 @@ var config = {
             alignment: 'left',
             title: 'MINNESOTA TIMBERWOLVES',
             description: `
-                Target Center            
+                Target Center
+                <img src="./images/timberwolves.png">            
                 `,
             location: {
-                center: [-93.2761, 44.9795],
-                zoom: 16,
+                center: [-93.2777, 44.9795],
+                zoom: 16.5,
                 pitch: 64,
                 bearing: 8
             },
@@ -560,11 +713,12 @@ var config = {
             alignment: 'left',
             title: 'NEW ORLEANS PELICANS',
             description: `
-                Smoothie King Center            
+                Smoothie King Center
+                <img src="./images/pelicans.png">            
                 `,
             location: {
-                center: [-90.0821, 29.9490],
-                zoom: 16,
+                center: [-90.0844, 29.9490],
+                zoom: 16.5,
                 pitch: 64,
                 bearing: 8
             },
@@ -582,12 +736,13 @@ var config = {
             alignment: 'left',
             title: 'OKLAHOMA CITY THUNDER',
             description: `
-                Chesapeake Energy Arena            
+                Chesapeake Energy Arena
+                <img src="./images/thunder.png">            
                 `,
             location: {
-                center: [-97.5151, 35.4634],
-                zoom: 16,
-                pitch: 64,
+                center: [-97.5166, 35.4634],
+                zoom: 16.5,
+                pitch: 32,
                 bearing: 8
             },
             onChapterEnter: [{
@@ -604,11 +759,12 @@ var config = {
             alignment: 'left',
             title: 'SAN ANTONIO SPURS',
             description: `
-                AT&T Center            
+                AT&T Center
+                <img src="./images/spurs.png">            
                 `,
             location: {
-                center: [-98.4375, 29.4270],
-                zoom: 16,
+                center: [-98.4388, 29.4270],
+                zoom: 16.5,
                 pitch: 64,
                 bearing: 8
             },
@@ -626,13 +782,14 @@ var config = {
             alignment: 'left',
             title: 'DENVER NUGGETS',
             description: `
-                Ball Arena            
+                Ball Arena
+                <img src="./images/nuggets.png">            
                 `,
             location: {
-                center: [-105.0076, 39.7487],
-                zoom: 16,
+                center: [-105.0095, 39.7488],
+                zoom: 16.5,
                 pitch: 64,
-                bearing: 8
+                bearing: 64
             },
             onChapterEnter: [{
                 layer: 'ball-arena',
@@ -648,12 +805,13 @@ var config = {
             alignment: 'left',
             title: 'PHOENIX SUNS',
             description: `
-                Phoenix Suns Arena            
+                Phoenix Suns Arena
+                <img src="./images/suns.png">            
                 `,
             location: {
-                center: [-112.0712, 33.4457],
-                zoom: 16,
-                pitch: 64,
+                center: [-112.0727, 33.4457],
+                zoom: 16.5,
+                pitch: 32,
                 bearing: 8
             },
             onChapterEnter: [{
@@ -670,11 +828,12 @@ var config = {
             alignment: 'left',
             title: 'UTAH JAZZ',
             description: `
-                Vivint Arena            
+                Vivint Arena
+                <img src="./images/jazz.png">            
                 `,
             location: {
-                center: [-111.9011, 40.7683],
-                zoom: 16,
+                center: [-111.9022, 40.7683],
+                zoom: 16.5,
                 pitch: 64,
                 bearing: 8
             },
@@ -692,13 +851,14 @@ var config = {
             alignment: 'left',
             title: 'GOLDEN STATE WARRIORS',
             description: `
-                Chase Center            
+                Chase Center
+                <img src="./images/warriors.png">            
                 `,
             location: {
-                center: [-122.3877, 37.7680],
-                zoom: 16,
+                center: [-122.3877, 37.7667],
+                zoom: 16.5,
                 pitch: 64,
-                bearing: 8
+                bearing: -64
             },
             onChapterEnter: [{
                 layer: 'chase-center',
@@ -714,11 +874,12 @@ var config = {
             alignment: 'left',
             title: 'LOS ANGELES CLIPPERS',
             description: `
-                Staples Center            
+                Staples Center
+                <img src="./images/clippers.png">            
                 `,
             location: {
-                center: [-118.2673, 34.0430],
-                zoom: 16,
+                center: [-118.2688, 34.0430],
+                zoom: 16.5,
                 pitch: 64,
                 bearing: 8
             },
@@ -733,13 +894,14 @@ var config = {
             alignment: 'left',
             title: 'LOS ANGELES LAKERS',
             description: `
-                Staples Center            
+                Staples Center
+                <img src="./images/lakers.png">            
                 `,
             location: {
-                center: [-118.2673, 34.0430],
-                zoom: 16,
+                center: [-118.2688, 34.0430],
+                zoom: 16.5,
                 pitch: 64,
-                bearing: -8
+                bearing: 8
             },
             onChapterEnter: [],
             onChapterExit: [{
@@ -752,13 +914,14 @@ var config = {
             alignment: 'left',
             title: 'PORTLAND TRAIL BLAZERS',
             description: `
-                Moda Center            
+                Moda Center
+                <img src="./images/blazers.png">            
                 `,
             location: {
-                center: [-122.6668, 45.5316],
-                zoom: 16,
+                center: [-122.6677, 45.5322],
+                zoom: 16.5,
                 pitch: 64,
-                bearing: 8
+                bearing: 32
             },
             onChapterEnter: [{
                 layer: 'moda-center',
@@ -774,13 +937,14 @@ var config = {
             alignment: 'left',
             title: 'SACRAMENTO KINGS',
             description: `
-                Golden 1 Center            
+                Golden 1 Center
+                <img src="./images/kings.png">            
                 `,
             location: {
-                center: [-121.4997, 38.5802],
-                zoom: 16,
+                center: [-121.5005, 38.5811],
+                zoom: 16.5,
                 pitch: 64,
-                bearing: 8
+                bearing: 64
             },
             onChapterEnter: [{
                 layer: 'golden-1-center',
