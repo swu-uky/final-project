@@ -65,7 +65,7 @@ the numbers and highlights presented.
 
 Figure 1. The very first wireframe draft using United Center in Chicago as an example.
 
-![Finalized Look](images/wirefram2.png)
+![Finalized Look](images/wireframe2.png)
 
 Figure 2. The finalized look of Chicago's information box.
 
@@ -77,3 +77,21 @@ the buildings around it to better accentuate its features.
 All logos are courtesy of [Logos World](https://logos-world.net/).
 
 ### E. Conclusion
+
+The data does not seem to support time zones being a significant factor in teams' performances. There are no noticeable patterns in differentials when teams travel around the country.
+
+However, a more general look at overall home/away differentials show strong signs of home court advantage. A boolean is run to test whether home numbers are better than away.
+A "True" means the team's performance at home are generally stronger than on the road.
+
+![2021](images/differential2021.png)
+
+21 of 30 NBA teams still performed better at home in the 2020-21 season when traveling considerations are the only major factor. This leads to me believe that although the time difference
+may not be influential, traveling is very well a factor.
+
+Things get even more interesting when compared with the 2018-19 season...
+
+![1819](images/differential1819.png)
+
+All but 1 NBA franchises showed better results at home than away. This is a strong indicator that having fans in the stands has a huge impact on players. With traveling largely unchanged between the seasons, it appears that crowd involvement is the cherry on top when it comes to helping the home team perform.
+
+If anything, I hope these results persuade more fans to go out and support their squads in person!
