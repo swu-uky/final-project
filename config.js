@@ -126,8 +126,41 @@ var config = {
                 NBA. For the most part, players can expect more or less the same atmosphere every single game. Furthermore, due to the
                 COVID-19 pandemic, the 2020-21 NBA Season saw the majority of the team either heavily limit or outright prohibit fan
                 attendance. Thus, with two major factors essentially out of the equation this project will use data and statistics to see
-                the effects of travel on home court advantage.</p>
+                the effects of travel on home court advantage. By comparing the 2020-21 numbers with 2018-19, this project also seeks
+                to extrapolate the effects of crowd involvement.</p>
                 <p><i>Let's get started!</i></p>                
+                `,
+            location: {
+                center: [-108, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [{
+                layer: 'venues',
+                opacity: 1
+            }, ],
+            onChapterExit: [{
+                layer: 'venues',
+                opacity: 0
+            }]
+        },
+        {
+            id: 'sixth',
+            alignment: 'left',
+            title: 'MAP GUIDE',
+            description: `
+                <img src="./images/eastwest.jpg">
+                <p>As you scroll through, the teams will be grouped by time zones from east to west
+                (Eastern, Central, Mountain, then Pacific). Within each time zone, the teams are listed alphabetically.</p>
+                <p>The numbers shown in the tables are point differentials. Due to the nature of the NBA, every season sees different teams
+                in the top and bottom of the standings. Therefore, raw point totals and win/loss records are not good indicators when comparing
+                across different seasons. A better team will be expected to score more points and win more games than a rebuilding one,
+                regardless of home or away. Differentials compare a team's home performances to their away performances.
+                In other words, a good team may win both at home and on the road, but winning by a bigger margin at home can be interpreted
+                as a home court advantage. Likewise, a rebuilding team likely loses at home and away, but if the games are closer at home,
+                then there are still signs of an advantage.</p>
+                <p><i>Scroll on!</i></p>                
                 `,
             location: {
                 center: [-108, 38],
@@ -157,56 +190,67 @@ var config = {
                   <th></th>
                   <th>Home</th>
                   <th>Away</th>
+                  <th>Differential</th>
                 </tr>
                 <tr>
                   <td>2018 - 19 Overall</td>
                   <td>- 4.02</td>
                   <td>- 8.02</td>
+                  <td><b style="color:greenyellow">+ 4.00</b></td>
                 </tr>
                 <tr>
                   <td>2020 - 21 Overall</td>
                   <td>+ 6.33</td>
                   <td>- 1.69</td>
+                  <td><b style="color:greenyellow">+ 8.02</b></td>
                 </tr>
                 <tr>
                   <td>2018 - 19 vs Pacific</td>
                   <td>- 14.40</td>
                   <td>- 6.80</td>
+                  <td><b style="color:lightcoral">- 7.60</b></td>
                 </tr>
                 <tr>
                   <td>2020 - 21 vs Pacific</td>
                   <td>+ 6.20</td>
                   <td>+ 0.80</td>
+                  <td><b style="color:greenyellow">+ 5.40</b></td>
                 </tr>
                 <tr>
                   <td>2018 - 19 vs Mountain</td>
                   <td>+ 6.33</td>
                   <td>- 18.33</td>
+                  <td><b style="color:greenyellow">+ 24.66</b></td>
                 </tr>
                 <tr>
                   <td>2020 - 21 vs Mountain</td>
                   <td>+ 6.33</td>
                   <td>- 18.33</td>
+                  <td><b style="color:greenyellow">+ 24.66</b></td>
                 </tr>
                 <tr>
                   <td>2018 - 19 vs Central</td>
                   <td>+ 0.36</td>
                   <td>- 4.73</td>
+                  <td><b style="color:greenyellow">+ 5.09</b></td>
                 </tr>
                 <tr>
                   <td>2020 - 21 vs Central</td>
                   <td>+ 5.73</td>
                   <td>+ 7.11</td>
+                  <td><b style="color:lightcoral">- 1.38</b></td>
                 </tr>
                 <tr>
                   <td>2018 - 19 vs Eastern</td>
                   <td>- 5.27</td>
                   <td>- 8.55</td>
+                  <td><b style="color:greenyellow">+ 3.28</b></td>
                 </tr>
                 <tr>
                   <td>2020 - 21 vs Eastern</td>
                   <td>+ 6.76</td>
                   <td>- 3.89</td>
+                  <td><b style="color:greenyellow">+ 10.65</b></td>
                 </tr>
               </table>
                 `,
@@ -230,8 +274,77 @@ var config = {
             alignment: 'left',
             title: 'BOSTON CELTICS',
             description: `
-                TD Garden
-                <img src="./images/celtics.png">            
+                Venue: TD Garden<br>
+                Time Zone: Eastern
+                <img src="./images/celtics.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 6.78</td>
+                  <td>+ 2.10</td>
+                  <td><b style="color:greenyellow">+ 4.68</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 3.00</td>
+                  <td>- 0.08</td>
+                  <td><b style="color:greenyellow">+ 3.08</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 3.00</td>
+                  <td>+ 3.40</td>
+                  <td><b style="color:lightcoral">- 6.40</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 2.40</td>
+                  <td>+ 2.40</td>
+                  <td><b style="color:lightcoral">- 4.80</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>- 9.67</td>
+                  <td>- 3.00</td>
+                  <td><b style="color:lightcoral">- 6.67</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>+ 6.00</td>
+                  <td>- 1.67</td>
+                  <td><b style="color:greenyellow">+ 7.67</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 4.80</td>
+                  <td>+ 5.40</td>
+                  <td><b style="color:lightcoral">- 0.60</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 3.00</td>
+                  <td>+ 3.82</td>
+                  <td><b style="color:lightcoral">- 0.82</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 11.91</td>
+                  <td>+ 1.04</td>
+                  <td><b style="color:greenyellow">+ 10.87</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 3.95</td>
+                  <td>- 3.06</td>
+                  <td><b style="color:greenyellow">+ 7.01</b></td>
+                </tr>
+              </table>            
                 `,
             location: {
                 center: [-71.0621, 42.3662],
@@ -253,8 +366,77 @@ var config = {
             alignment: 'left',
             title: 'BROOKLYN NETS',
             description: `
-                Barclays Center
-                <img src="./images/nets.png">            
+                Venue: Barclays Center<br>
+                Time Zone: Eastern
+                <img src="./images/nets.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 2.54</td>
+                  <td>+ 2.68</td>
+                  <td><b style="color:greenyellow">+ 5.22</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 6.44</td>
+                  <td>+ 2.56</td>
+                  <td><b style="color:greenyellow">+ 3.88</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>+ 1.20</td>
+                  <td>- 3.20</td>
+                  <td><b style="color:greenyellow">+ 4.40</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 1.00</td>
+                  <td>+ 9.40</td>
+                  <td><b style="color:lightcoral">- 10.40</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 1.00</td>
+                  <td>+ 2.67</td>
+                  <td><b style="color:lightcoral">- 1.67</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>+ 16.33</td>
+                  <td>- 6.67</td>
+                  <td><b style="color:greenyellow">+ 23.00</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>- 0.82</td>
+                  <td>- 0.64</td>
+                  <td><b style="color:lightcoral">- 0.18</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 4.22</td>
+                  <td>+ 6.18</td>
+                  <td><b style="color:lightcoral">- 1.96</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 4.73</td>
+                  <td>- 4.32</td>
+                  <td><b style="color:greenyellow">+ 9.05</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 7.89</td>
+                  <td>- 0.18</td>
+                  <td><b style="color:greenyellow">+ 8.07</b></td>
+                </tr>
+              </table>             
                 `,
             location: {
                 center: [-73.9779, 40.6826],
@@ -276,8 +458,77 @@ var config = {
             alignment: 'left',
             title: 'CHARLOTTE HORNETS',
             description: `
-                Spectrum Center
+                Venue: Spectrum Center<br>
+                Time Zone: Eastern
                 <img src="./images/hornets.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 3.68</td>
+                  <td>- 5.88</td>
+                  <td><b style="color:greenyellow">+ 9.56</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>- 0.11</td>
+                  <td>- 3.75</td>
+                  <td><b style="color:greenyellow">+ 3.64</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 6.40</td>
+                  <td>- 23.60</td>
+                  <td><b style="color:greenyellow">+ 17.20</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 3.00</td>
+                  <td>- 11.60</td>
+                  <td><b style="color:greenyellow">+ 8.60</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 6.00</td>
+                  <td>- 5.33</td>
+                  <td><b style="color:greenyellow">+ 11.33</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>- 8.67</td>
+                  <td>- 14.67</td>
+                  <td><b style="color:greenyellow">+ 6.00</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 0.45</td>
+                  <td>- 3.60</td>
+                  <td><b style="color:greenyellow">+ 4.05</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>- 3.91</td>
+                  <td>+ 8.22</td>
+                  <td><b style="color:lightcoral">- 12.13</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 7.27</td>
+                  <td>- 3.09</td>
+                  <td><b style="color:greenyellow">+ 10.36</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>- 3.75</td>
+                  <td>- 5.63</td>
+                  <td><b style="color:greenyellow">+ 1.88</b></td>
+                </tr>
+              </table>  
                 `,
             location: {
                 center: [-80.8394, 35.2252],
@@ -299,8 +550,77 @@ var config = {
             alignment: 'left',
             title: 'CLEVELAND CAVALIERS',
             description: `
-                Rocket Mortgage Fieldhouse
-                <img src="./images/cavaliers.png">                
+                Venue: Rocket Mortgage Fieldhouse<br>
+                Time Zone: Eastern
+                <img src="./images/cavaliers.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>- 9.78</td>
+                  <td>- 11.88</td>
+                  <td><b style="color:greenyellow">+ 2.10</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>- 6.86</td>
+                  <td>- 10.03</td>
+                  <td><b style="color:greenyellow">+ 3.17</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 12.40</td>
+                  <td>- 10.80</td>
+                  <td><b style="color:lightcoral">- 1.60</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 19.40</td>
+                  <td>- 16.60</td>
+                  <td><b style="color:lightcoral">- 2.80</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>- 10.67</td>
+                  <td>- 15.67</td>
+                  <td><b style="color:greenyellow">+ 5.00</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>- 21.00</td>
+                  <td>- 27.67</td>
+                  <td><b style="color:greenyellow">+ 6.67</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>- 10.45</td>
+                  <td>- 11.27</td>
+                  <td><b style="color:greenyellow">+ 0.82</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>- 7.50</td>
+                  <td>- 0.40</td>
+                  <td><b style="color:lightcoral">- 7.10</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>- 8.73</td>
+                  <td>- 11.91</td>
+                  <td><b style="color:greenyellow">+ 3.18</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>- 0.67</td>
+                  <td>- 10.61</td>
+                  <td><b style="color:greenyellow">+ 9.94</b></td>
+                </tr>
+              </table>                  
                 `,
             location: {
                 center: [-81.6881, 41.4981],
@@ -322,8 +642,77 @@ var config = {
             alignment: 'left',
             title: 'DETROIT PISTONS',
             description: `
-                Little Caesars Arena
-                <img src="./images/pistons.png">            
+                Venue: Little Caesars Arena<br>
+                Time Zone: Eastern
+                <img src="./images/pistons.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 2.56</td>
+                  <td>- 3.05</td>
+                  <td><b style="color:greenyellow">+ 5.61</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>- 3.06</td>
+                  <td>- 5.89</td>
+                  <td><b style="color:greenyellow">+ 2.83</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>+ 4.00</td>
+                  <td>- 6.00</td>
+                  <td><b style="color:greenyellow">+ 10.00</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 4.60</td>
+                  <td>- 8.60</td>
+                  <td><b style="color:greenyellow">+ 4.00</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 10.67</td>
+                  <td>+ 3.67</td>
+                  <td><b style="color:greenyellow">+ 7.00</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>- 6.00</td>
+                  <td>- 14.67</td>
+                  <td><b style="color:greenyellow">+ 8.67</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 1.36</td>
+                  <td>- 4.64</td>
+                  <td><b style="color:greenyellow">+ 6.00</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>- 4.40</td>
+                  <td>- 5.00</td>
+                  <td><b style="color:greenyellow">+ 0.60</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 1.73</td>
+                  <td>- 2.50</td>
+                  <td><b style="color:greenyellow">+ 4.23</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>- 1.39</td>
+                  <td>- 4.17</td>
+                  <td><b style="color:greenyellow">+ 2.78</b></td>
+                </tr>
+              </table>               
                 `,
             location: {
                 center: [-83.0573, 42.3411],
@@ -345,8 +734,77 @@ var config = {
             alignment: 'left',
             title: 'INDIANA PACERS',
             description: `
-                Bankers Life Fieldhouse
-                <img src="./images/pacers.png">            
+                Venue: Bankers Life Fieldhouse<br>
+                Time Zone: Eastern
+                <img src="./images/pacers.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 7.63</td>
+                  <td>+ 1.46</td>
+                  <td><b style="color:greenyellow">+ 6.17</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>- 2.75</td>
+                  <td>+ 2.67</td>
+                  <td><b style="color:lightcoral">- 5.42</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>+ 6.80</td>
+                  <td>- 9.20</td>
+                  <td><b style="color:greenyellow">+ 16.00</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 10.80</td>
+                  <td>- 2.00</td>
+                  <td><b style="color:lightcoral">- 8.80</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 32.33</td>
+                  <td>+ 12.00</td>
+                  <td><b style="color:greenyellow">+ 20.33</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>- 8.67</td>
+                  <td>- 4.00</td>
+                  <td><b style="color:lightcoral">- 4.67</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 6.45</td>
+                  <td>- 4.64</td>
+                  <td><b style="color:greenyellow">+ 11.09</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>- 2.60</td>
+                  <td>+ 7.30</td>
+                  <td><b style="color:lightcoral">- 9.90</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 5.05</td>
+                  <td>+ 5.50</td>
+                  <td><b style="color:lightcoral">- 0.45</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 0.39</td>
+                  <td>+ 2.50</td>
+                  <td><b style="color:lightcoral">- 2.11</b></td>
+                </tr>
+              </table>              
                 `,
             location: {
                 center: [-86.1575, 39.7640],
@@ -368,8 +826,77 @@ var config = {
             alignment: 'left',
             title: 'MIAMI HEAT',
             description: `
-                American Airlines Arena
-                <img src="./images/heat.png">            
+                Venue: American Airlines Arena<br>
+                Time Zone: Eastern
+                <img src="./images/heat.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 0.24</td>
+                  <td>- 0.71</td>
+                  <td><b style="color:greenyellow">+ 0.95</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 1.31</td>
+                  <td>- 0.42</td>
+                  <td><b style="color:greenyellow">+ 1.73</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 5.60</td>
+                  <td>+ 4.40</td>
+                  <td><b style="color:lightcoral">- 10.00</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>+ 1.40</td>
+                  <td>+ 0.80</td>
+                  <td><b style="color:greenyellow">+ 0.60</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>- 1.67</td>
+                  <td>- 8.67</td>
+                  <td><b style="color:greenyellow">+ 7.00</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>- 9.67</td>
+                  <td>- 18.33</td>
+                  <td><b style="color:greenyellow">+ 8.66</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>- 2.50</td>
+                  <td>- 1.55</td>
+                  <td><b style="color:lightcoral">- 0.95</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 3.82</td>
+                  <td>+ 2.89</td>
+                  <td><b style="color:greenyellow">+ 0.93</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 2.96</td>
+                  <td>- 0.36</td>
+                  <td><b style="color:greenyellow">+ 3.32</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 1.59</td>
+                  <td>+ 0.53</td>
+                  <td><b style="color:greenyellow">+ 1.06</b></td>
+                </tr>
+              </table>              
                 `,
             location: {
                 center: [-80.1870, 25.7799],
@@ -391,8 +918,77 @@ var config = {
             alignment: 'left',
             title: 'NEW YORK KNICKS',
             description: `
-                Madison Square Garden
-                <img src="./images/knicks.png">            
+                Venue: Madison Square Garden<br>
+                Time Zone: Eastern
+                <img src="./images/knicks.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>- 7.85</td>
+                  <td>- 10.56</td>
+                  <td><b style="color:greenyellow">+ 2.71</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 4.14</td>
+                  <td>+ 0.47</td>
+                  <td><b style="color:greenyellow">+ 3.67</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 10.00</td>
+                  <td>- 11.60</td>
+                  <td><b style="color:greenyellow">+ 1.60</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>+ 4.60</td>
+                  <td>+ 1.40</td>
+                  <td><b style="color:greenyellow">+ 3.20</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>- 19.00</td>
+                  <td>- 16.67</td>
+                  <td><b style="color:lightcoral">- 2.33</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>- 7.00</td>
+                  <td>- 17.67</td>
+                  <td><b style="color:greenyellow">+ 10.67</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>- 5.18</td>
+                  <td>- 9.10</td>
+                  <td><b style="color:greenyellow">+ 3.92</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 6.44</td>
+                  <td>+ 1.91</td>
+                  <td><b style="color:greenyellow">+ 4.53</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>- 7.18</td>
+                  <td>- 10.17</td>
+                  <td><b style="color:greenyellow">+ 2.99</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 4.68</td>
+                  <td>+ 2.47</td>
+                  <td><b style="color:greenyellow">+ 2.21</b></td>
+                </tr>
+              </table>              
                 `,
             location: {
                 center: [-73.9955, 40.7505],
@@ -414,8 +1010,77 @@ var config = {
             alignment: 'left',
             title: 'ORLANDO MAGIC',
             description: `
-                Amway Center
-                <img src="./images/magic.png">            
+                Venue: Amway Center<br>
+                Time Zone: Eastern
+                <img src="./images/magic.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 2.66</td>
+                  <td>- 1.24</td>
+                  <td><b style="color:greenyellow">+ 3.90</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>- 9.00</td>
+                  <td>- 9.61</td>
+                  <td><b style="color:greenyellow">+ 0.61</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 5.40</td>
+                  <td>- 6.20</td>
+                  <td><b style="color:greenyellow">+ 0.80</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 10.80</td>
+                  <td>- 0.00</td>
+                  <td><b style="color:lightcoral">- 10.80</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>- 0.33</td>
+                  <td>- 8.00</td>
+                  <td><b style="color:greenyellow">+ 7.67</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>- 8.33</td>
+                  <td>- 25.00</td>
+                  <td><b style="color:greenyellow">+ 16.67</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>- 0.40</td>
+                  <td>- 1.09</td>
+                  <td><b style="color:greenyellow">+ 0.69</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>- 17.18</td>
+                  <td>- 9.56</td>
+                  <td><b style="color:lightcoral">- 7.62</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 6.13</td>
+                  <td>- 0.73</td>
+                  <td><b style="color:greenyellow">+ 6.86</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>- 3.29</td>
+                  <td>- 9.74</td>
+                  <td><b style="color:greenyellow">+ 6.45</b></td>
+                </tr>
+              </table>              
                 `,
             location: {
                 center: [-81.3850, 28.5392],
@@ -437,8 +1102,77 @@ var config = {
             alignment: 'left',
             title: 'PHILADELPHIA 76ERS',
             description: `
-                Wells Fargo Center
-                <img src="./images/76ers.png">            
+                Venue: Wells Fargo Center<br>
+                Time Zone: Eastern
+                <img src="./images/76ers.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 8.05</td>
+                  <td>- 2.66</td>
+                  <td><b style="color:greenyellow">+ 10.71</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 8.92</td>
+                  <td>+ 2.25</td>
+                  <td><b style="color:greenyellow">+ 6.67</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>+ 4.60</td>
+                  <td>- 2.00</td>
+                  <td><b style="color:greenyellow">+ 6.60</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>+ 0.20</td>
+                  <td>+ 2.40</td>
+                  <td><b style="color:lightcoral">- 2.20</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 6.00</td>
+                  <td>+ 2.00</td>
+                  <td><b style="color:greenyellow">+ 4.00</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>- 2.33</td>
+                  <td>- 9.67</td>
+                  <td><b style="color:greenyellow">+ 7.34</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 11.40</td>
+                  <td>- 4.18</td>
+                  <td><b style="color:greenyellow">+ 15.58</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 9.22</td>
+                  <td>+ 6.18</td>
+                  <td><b style="color:greenyellow">+ 3.04</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 7.61</td>
+                  <td>- 2.68</td>
+                  <td><b style="color:greenyellow">+ 10.29</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 12.84</td>
+                  <td>+ 1.76</td>
+                  <td><b style="color:greenyellow">+ 11.08</b></td>
+                </tr>
+              </table>              
                 `,
             location: {
                 center: [-75.1730, 39.9009],
@@ -460,8 +1194,77 @@ var config = {
             alignment: 'left',
             title: 'TORONTO RAPTORS',
             description: `
-                Scotiabank Arena
-                <img src="./images/raptors.png">            
+                Venue: Scotiabank Arena<br>
+                Time Zone: Eastern
+                <img src="./images/raptors.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 7.56</td>
+                  <td>+ 4.61</td>
+                  <td><b style="color:greenyellow">+ 2.95</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 1.50</td>
+                  <td>- 5.22</td>
+                  <td><b style="color:greenyellow">+ 6.72</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>+ 10.20</td>
+                  <td>+ 12.20</td>
+                  <td><b style="color:lightcoral">- 2.00</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>+ 3.60</td>
+                  <td>- 15.80</td>
+                  <td><b style="color:greenyellow">+ 19.40</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 1.67</td>
+                  <td>+ 4.33</td>
+                  <td><b style="color:lightcoral">- 2.66</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>+ 5.67</td>
+                  <td>- 7.33</td>
+                  <td><b style="color:greenyellow">+ 13.00</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 0.91</td>
+                  <td>+ 8.82</td>
+                  <td><b style="color:lightcoral">- 7.91</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 0.11</td>
+                  <td>- 2.82</td>
+                  <td><b style="color:greenyellow">+ 2.93</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 11.09</td>
+                  <td>+ 0.82</td>
+                  <td><b style="color:greenyellow">+ 10.27</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 0.95</td>
+                  <td>- 3.29</td>
+                  <td><b style="color:greenyellow">+ 4.24</b></td>
+                </tr>
+              </table>              
                 `,
             location: {
                 center: [-79.3808, 43.6435],
@@ -483,8 +1286,77 @@ var config = {
             alignment: 'left',
             title: 'WASHINGTON WIZARDS',
             description: `
-                Capital One Arena
-                <img src="./images/wizards.png">            
+                Venue: Capital One Arena<br>
+                Time Zone: Eastern
+                <img src="./images/wizards.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 1.76</td>
+                  <td>- 7.56</td>
+                  <td><b style="color:greenyellow">+ 9.32</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>- 0.08</td>
+                  <td>- 3.58</td>
+                  <td><b style="color:greenyellow">+ 3.50</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>+ 2.60</td>
+                  <td>- 15.00</td>
+                  <td><b style="color:greenyellow">+ 17.60</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>+ 0.40</td>
+                  <td>+ 1.20</td>
+                  <td><b style="color:lightcoral">- 0.80</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>- 7.67</td>
+                  <td>+ 1.33</td>
+                  <td><b style="color:lightcoral">- 9.00</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>+ 10.67</td>
+                  <td>- 7.33</td>
+                  <td><b style="color:greenyellow">+ 18.00</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>- 1.36</td>
+                  <td>- 8.60</td>
+                  <td><b style="color:greenyellow">+ 7.24</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>- 2.27</td>
+                  <td>- 3.22</td>
+                  <td><b style="color:greenyellow">+ 0.95</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 4.41</td>
+                  <td>- 6.65</td>
+                  <td><b style="color:greenyellow">+ 11.06</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>- 0.71</td>
+                  <td>- 4.42</td>
+                  <td><b style="color:greenyellow">+ 3.71</b></td>
+                </tr>
+              </table>              
                 `,
             location: {
                 center: [-77.0208, 38.8966],
@@ -598,8 +1470,77 @@ var config = {
             alignment: 'left',
             title: 'DALLAS MAVERICKS',
             description: `
-                American Airlines Center
-                <img src="./images/mavericks.png">            
+                Venue: American Airlines Center<br>
+                Time Zone: Central
+                <img src="./images/mavericks.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>- 4.02</td>
+                  <td>- 8.02</td>
+                  <td><b style="color:greenyellow">+ 4.00</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 6.33</td>
+                  <td>- 1.69</td>
+                  <td><b style="color:greenyellow">+ 8.02</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 14.40</td>
+                  <td>- 6.80</td>
+                  <td><b style="color:lightcoral">- 7.60</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>+ 6.20</td>
+                  <td>+ 0.80</td>
+                  <td><b style="color:greenyellow">+ 5.40</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 6.33</td>
+                  <td>- 18.33</td>
+                  <td><b style="color:greenyellow">+ 24.66</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>+ 6.33</td>
+                  <td>- 18.33</td>
+                  <td><b style="color:greenyellow">+ 24.66</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 0.36</td>
+                  <td>- 4.73</td>
+                  <td><b style="color:greenyellow">+ 5.09</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 5.73</td>
+                  <td>+ 7.11</td>
+                  <td><b style="color:lightcoral">- 1.38</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>- 5.27</td>
+                  <td>- 8.55</td>
+                  <td><b style="color:greenyellow">+ 3.28</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 6.76</td>
+                  <td>- 3.89</td>
+                  <td><b style="color:greenyellow">+ 10.65</b></td>
+                </tr>
+              </table>            
                 `,
             location: {
                 center: [-96.8111, 32.7922],
@@ -621,8 +1562,77 @@ var config = {
             alignment: 'left',
             title: 'HOUSTON ROCKETS',
             description: `
-                Toyota Center
-                <img src="./images/rockets.png">            
+                Venue: Toyota Center<br>
+                Time Zone: Central
+                <img src="./images/rockets.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 6.78</td>
+                  <td>+ 2.10</td>
+                  <td><b style="color:greenyellow">+ 4.68</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 3.00</td>
+                  <td>- 0.08</td>
+                  <td><b style="color:greenyellow">+ 3.08</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 3.00</td>
+                  <td>+ 3.40</td>
+                  <td><b style="color:lightcoral">- 6.40</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 2.40</td>
+                  <td>+ 2.40</td>
+                  <td><b style="color:lightcoral">- 4.80</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>- 9.67</td>
+                  <td>- 3.00</td>
+                  <td><b style="color:lightcoral">- 6.67</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>+ 6.00</td>
+                  <td>- 1.67</td>
+                  <td><b style="color:greenyellow">+ 7.67</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 4.80</td>
+                  <td>+ 5.40</td>
+                  <td><b style="color:lightcoral">- 0.60</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 3.00</td>
+                  <td>+ 3.82</td>
+                  <td><b style="color:lightcoral">- 0.82</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 11.91</td>
+                  <td>+ 1.04</td>
+                  <td><b style="color:greenyellow">+ 10.87</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 3.95</td>
+                  <td>- 3.06</td>
+                  <td><b style="color:greenyellow">+ 7.01</b></td>
+                </tr>
+              </table>            
                 `,
             location: {
                 center: [-95.3636, 29.7508],
@@ -644,8 +1654,77 @@ var config = {
             alignment: 'left',
             title: 'MEMPHIS GRIZZLIES',
             description: `
-                FedEx Forum
-                <img src="./images/grizzlies.png">            
+                Venue: FedEx Forum<br>
+                Time Zone: Central
+                <img src="./images/grizzlies.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>- 9.80</td>
+                  <td>- 7.02</td>
+                  <td><b style="color:lightcoral">- 2.78</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>- 1.69</td>
+                  <td>- 0.08</td>
+                  <td><b style="color:lightcoral">- 1.61</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 17.00</td>
+                  <td>- 18.00</td>
+                  <td><b style="color:greenyellow">+ 1.00</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 4.80</td>
+                  <td>- 4.00</td>
+                  <td><b style="color:lightcoral">- 0.80</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>- 8.00</td>
+                  <td>- 7.67</td>
+                  <td><b style="color:lightcoral">- 0.33</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>- 13.33</td>
+                  <td>- 5.33</td>
+                  <td><b style="color:lightcoral">- 8.00</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>- 6.00</td>
+                  <td>- 9.56</td>
+                  <td><b style="color:greenyellow">+ 3.56</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 3.78</td>
+                  <td>- 2.88</td>
+                  <td><b style="color:greenyellow">+ 6.66</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>- 9.96</td>
+                  <td>- 3.71</td>
+                  <td><b style="color:lightcoral">- 6.51</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>- 1.63</td>
+                  <td>+ 2.80</td>
+                  <td><b style="color:lightcoral">- 4.43</b></td>
+                </tr>
+              </table>            
                 `,
             location: {
                 center: [-90.0522, 35.1395],
@@ -667,8 +1746,77 @@ var config = {
             alignment: 'left',
             title: 'MILWAUKEE BUCKS',
             description: `
-                Fiserv Forum
-                <img src="./images/bucks.png">            
+                Venue: Fiserv Forum<br>
+                Time Zone: Central
+                <img src="./images/bucks.png"> 
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 3.68</td>
+                  <td>- 5.88</td>
+                  <td><b style="color:greenyellow">+ 9.56</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>- 0.11</td>
+                  <td>- 3.75</td>
+                  <td><b style="color:greenyellow">+ 3.64</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 6.40</td>
+                  <td>- 23.60</td>
+                  <td><b style="color:greenyellow">+ 17.20</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 3.00</td>
+                  <td>- 11.60</td>
+                  <td><b style="color:greenyellow">+ 8.60</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 6.00</td>
+                  <td>- 5.33</td>
+                  <td><b style="color:greenyellow">+ 11.33</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>- 8.67</td>
+                  <td>- 14.67</td>
+                  <td><b style="color:greenyellow">+ 6.00</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 0.45</td>
+                  <td>- 3.60</td>
+                  <td><b style="color:greenyellow">+ 4.05</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>- 3.91</td>
+                  <td>+ 8.22</td>
+                  <td><b style="color:lightcoral">- 12.13</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 7.27</td>
+                  <td>- 3.09</td>
+                  <td><b style="color:greenyellow">+ 10.36</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>- 3.75</td>
+                  <td>- 5.63</td>
+                  <td><b style="color:greenyellow">+ 1.88</b></td>
+                </tr>
+              </table>             
                 `,
             location: {
                 center: [-87.9191, 43.0451],
@@ -690,8 +1838,77 @@ var config = {
             alignment: 'left',
             title: 'MINNESOTA TIMBERWOLVES',
             description: `
-                Target Center
-                <img src="./images/timberwolves.png">            
+                Venue: Target Center<br>
+                Time Zone: Central
+                <img src="./images/timberwolves.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>- 4.02</td>
+                  <td>- 8.02</td>
+                  <td><b style="color:greenyellow">+ 4.00</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 6.33</td>
+                  <td>- 1.69</td>
+                  <td><b style="color:greenyellow">+ 8.02</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 14.40</td>
+                  <td>- 6.80</td>
+                  <td><b style="color:lightcoral">- 7.60</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>+ 6.20</td>
+                  <td>+ 0.80</td>
+                  <td><b style="color:greenyellow">+ 5.40</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 6.33</td>
+                  <td>- 18.33</td>
+                  <td><b style="color:greenyellow">+ 24.66</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>+ 6.33</td>
+                  <td>- 18.33</td>
+                  <td><b style="color:greenyellow">+ 24.66</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 0.36</td>
+                  <td>- 4.73</td>
+                  <td><b style="color:greenyellow">+ 5.09</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 5.73</td>
+                  <td>+ 7.11</td>
+                  <td><b style="color:lightcoral">- 1.38</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>- 5.27</td>
+                  <td>- 8.55</td>
+                  <td><b style="color:greenyellow">+ 3.28</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 6.76</td>
+                  <td>- 3.89</td>
+                  <td><b style="color:greenyellow">+ 10.65</b></td>
+                </tr>
+              </table>            
                 `,
             location: {
                 center: [-93.2777, 44.9795],
@@ -713,8 +1930,77 @@ var config = {
             alignment: 'left',
             title: 'NEW ORLEANS PELICANS',
             description: `
-                Smoothie King Center
-                <img src="./images/pelicans.png">            
+                Venue: Smoothie King Center<br>
+                Time Zone: Central
+                <img src="./images/pelicans.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 6.78</td>
+                  <td>+ 2.10</td>
+                  <td><b style="color:greenyellow">+ 4.68</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 3.00</td>
+                  <td>- 0.08</td>
+                  <td><b style="color:greenyellow">+ 3.08</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 3.00</td>
+                  <td>+ 3.40</td>
+                  <td><b style="color:lightcoral">- 6.40</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 2.40</td>
+                  <td>+ 2.40</td>
+                  <td><b style="color:lightcoral">- 4.80</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>- 9.67</td>
+                  <td>- 3.00</td>
+                  <td><b style="color:lightcoral">- 6.67</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>+ 6.00</td>
+                  <td>- 1.67</td>
+                  <td><b style="color:greenyellow">+ 7.67</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 4.80</td>
+                  <td>+ 5.40</td>
+                  <td><b style="color:lightcoral">- 0.60</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 3.00</td>
+                  <td>+ 3.82</td>
+                  <td><b style="color:lightcoral">- 0.82</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 11.91</td>
+                  <td>+ 1.04</td>
+                  <td><b style="color:greenyellow">+ 10.87</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 3.95</td>
+                  <td>- 3.06</td>
+                  <td><b style="color:greenyellow">+ 7.01</b></td>
+                </tr>
+              </table>            
                 `,
             location: {
                 center: [-90.0844, 29.9490],
@@ -736,8 +2022,77 @@ var config = {
             alignment: 'left',
             title: 'OKLAHOMA CITY THUNDER',
             description: `
-                Chesapeake Energy Arena
-                <img src="./images/thunder.png">            
+                Venue: Chesapeake Energy Arena<br>
+                Time Zone: Central
+                <img src="./images/thunder.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 2.54</td>
+                  <td>+ 2.68</td>
+                  <td><b style="color:greenyellow">+ 5.22</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 6.44</td>
+                  <td>+ 2.56</td>
+                  <td><b style="color:greenyellow">+ 3.88</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>+ 1.20</td>
+                  <td>- 3.20</td>
+                  <td><b style="color:greenyellow">+ 4.40</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 1.00</td>
+                  <td>+ 9.40</td>
+                  <td><b style="color:lightcoral">- 10.40</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 1.00</td>
+                  <td>+ 2.67</td>
+                  <td><b style="color:lightcoral">- 1.67</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>+ 16.33</td>
+                  <td>- 6.67</td>
+                  <td><b style="color:greenyellow">+ 23.00</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>- 0.82</td>
+                  <td>- 0.64</td>
+                  <td><b style="color:lightcoral">- 0.18</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 4.22</td>
+                  <td>+ 6.18</td>
+                  <td><b style="color:lightcoral">- 1.96</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 4.73</td>
+                  <td>- 4.32</td>
+                  <td><b style="color:greenyellow">+ 9.05</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 7.89</td>
+                  <td>- 0.18</td>
+                  <td><b style="color:greenyellow">+ 8.07</b></td>
+                </tr>
+              </table>            
                 `,
             location: {
                 center: [-97.5166, 35.4634],
@@ -759,8 +2114,77 @@ var config = {
             alignment: 'left',
             title: 'SAN ANTONIO SPURS',
             description: `
-                AT&T Center
-                <img src="./images/spurs.png">            
+                Venue: AT&T Center<br>
+                Time Zone: Central
+                <img src="./images/spurs.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 3.68</td>
+                  <td>- 5.88</td>
+                  <td><b style="color:greenyellow">+ 9.56</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>- 0.11</td>
+                  <td>- 3.75</td>
+                  <td><b style="color:greenyellow">+ 3.64</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 6.40</td>
+                  <td>- 23.60</td>
+                  <td><b style="color:greenyellow">+ 17.20</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 3.00</td>
+                  <td>- 11.60</td>
+                  <td><b style="color:greenyellow">+ 8.60</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 6.00</td>
+                  <td>- 5.33</td>
+                  <td><b style="color:greenyellow">+ 11.33</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>- 8.67</td>
+                  <td>- 14.67</td>
+                  <td><b style="color:greenyellow">+ 6.00</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 0.45</td>
+                  <td>- 3.60</td>
+                  <td><b style="color:greenyellow">+ 4.05</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>- 3.91</td>
+                  <td>+ 8.22</td>
+                  <td><b style="color:lightcoral">- 12.13</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 7.27</td>
+                  <td>- 3.09</td>
+                  <td><b style="color:greenyellow">+ 10.36</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>- 3.75</td>
+                  <td>- 5.63</td>
+                  <td><b style="color:greenyellow">+ 1.88</b></td>
+                </tr>
+              </table>              
                 `,
             location: {
                 center: [-98.4388, 29.4270],
@@ -782,8 +2206,77 @@ var config = {
             alignment: 'left',
             title: 'DENVER NUGGETS',
             description: `
-                Ball Arena
-                <img src="./images/nuggets.png">            
+                Venue: Ball Arena<br>
+                Time Zone: Mountain
+                <img src="./images/nuggets.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>- 4.02</td>
+                  <td>- 8.02</td>
+                  <td><b style="color:greenyellow">+ 4.00</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 6.33</td>
+                  <td>- 1.69</td>
+                  <td><b style="color:greenyellow">+ 8.02</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 14.40</td>
+                  <td>- 6.80</td>
+                  <td><b style="color:lightcoral">- 7.60</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>+ 6.20</td>
+                  <td>+ 0.80</td>
+                  <td><b style="color:greenyellow">+ 5.40</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 6.33</td>
+                  <td>- 18.33</td>
+                  <td><b style="color:greenyellow">+ 24.66</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>+ 6.33</td>
+                  <td>- 18.33</td>
+                  <td><b style="color:greenyellow">+ 24.66</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 0.36</td>
+                  <td>- 4.73</td>
+                  <td><b style="color:greenyellow">+ 5.09</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 5.73</td>
+                  <td>+ 7.11</td>
+                  <td><b style="color:lightcoral">- 1.38</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>- 5.27</td>
+                  <td>- 8.55</td>
+                  <td><b style="color:greenyellow">+ 3.28</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 6.76</td>
+                  <td>- 3.89</td>
+                  <td><b style="color:greenyellow">+ 10.65</b></td>
+                </tr>
+              </table>            
                 `,
             location: {
                 center: [-105.0095, 39.7488],
@@ -805,8 +2298,77 @@ var config = {
             alignment: 'left',
             title: 'PHOENIX SUNS',
             description: `
-                Phoenix Suns Arena
-                <img src="./images/suns.png">            
+                Venue: Phoenix Suns Arena<br>
+                Time Zone: Mountain
+                <img src="./images/suns.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 6.78</td>
+                  <td>+ 2.10</td>
+                  <td><b style="color:greenyellow">+ 4.68</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 3.00</td>
+                  <td>- 0.08</td>
+                  <td><b style="color:greenyellow">+ 3.08</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 3.00</td>
+                  <td>+ 3.40</td>
+                  <td><b style="color:lightcoral">- 6.40</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 2.40</td>
+                  <td>+ 2.40</td>
+                  <td><b style="color:lightcoral">- 4.80</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>- 9.67</td>
+                  <td>- 3.00</td>
+                  <td><b style="color:lightcoral">- 6.67</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>+ 6.00</td>
+                  <td>- 1.67</td>
+                  <td><b style="color:greenyellow">+ 7.67</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 4.80</td>
+                  <td>+ 5.40</td>
+                  <td><b style="color:lightcoral">- 0.60</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 3.00</td>
+                  <td>+ 3.82</td>
+                  <td><b style="color:lightcoral">- 0.82</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 11.91</td>
+                  <td>+ 1.04</td>
+                  <td><b style="color:greenyellow">+ 10.87</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 3.95</td>
+                  <td>- 3.06</td>
+                  <td><b style="color:greenyellow">+ 7.01</b></td>
+                </tr>
+              </table>            
                 `,
             location: {
                 center: [-112.0727, 33.4457],
@@ -828,8 +2390,77 @@ var config = {
             alignment: 'left',
             title: 'UTAH JAZZ',
             description: `
-                Vivint Arena
-                <img src="./images/jazz.png">            
+                Venue: Vivint Arena<br>
+                Time Zone: Mountain
+                <img src="./images/jazz.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 2.54</td>
+                  <td>+ 2.68</td>
+                  <td><b style="color:greenyellow">+ 5.22</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 6.44</td>
+                  <td>+ 2.56</td>
+                  <td><b style="color:greenyellow">+ 3.88</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>+ 1.20</td>
+                  <td>- 3.20</td>
+                  <td><b style="color:greenyellow">+ 4.40</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 1.00</td>
+                  <td>+ 9.40</td>
+                  <td><b style="color:lightcoral">- 10.40</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 1.00</td>
+                  <td>+ 2.67</td>
+                  <td><b style="color:lightcoral">- 1.67</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>+ 16.33</td>
+                  <td>- 6.67</td>
+                  <td><b style="color:greenyellow">+ 23.00</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>- 0.82</td>
+                  <td>- 0.64</td>
+                  <td><b style="color:lightcoral">- 0.18</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 4.22</td>
+                  <td>+ 6.18</td>
+                  <td><b style="color:lightcoral">- 1.96</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 4.73</td>
+                  <td>- 4.32</td>
+                  <td><b style="color:greenyellow">+ 9.05</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 7.89</td>
+                  <td>- 0.18</td>
+                  <td><b style="color:greenyellow">+ 8.07</b></td>
+                </tr>
+              </table>            
                 `,
             location: {
                 center: [-111.9022, 40.7683],
@@ -851,8 +2482,77 @@ var config = {
             alignment: 'left',
             title: 'GOLDEN STATE WARRIORS',
             description: `
-                Chase Center
-                <img src="./images/warriors.png">            
+                Venue: Chase Center<br>
+                Time Zone: Pacific
+                <img src="./images/warriors.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 3.68</td>
+                  <td>- 5.88</td>
+                  <td><b style="color:greenyellow">+ 9.56</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>- 0.11</td>
+                  <td>- 3.75</td>
+                  <td><b style="color:greenyellow">+ 3.64</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 6.40</td>
+                  <td>- 23.60</td>
+                  <td><b style="color:greenyellow">+ 17.20</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 3.00</td>
+                  <td>- 11.60</td>
+                  <td><b style="color:greenyellow">+ 8.60</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 6.00</td>
+                  <td>- 5.33</td>
+                  <td><b style="color:greenyellow">+ 11.33</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>- 8.67</td>
+                  <td>- 14.67</td>
+                  <td><b style="color:greenyellow">+ 6.00</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 0.45</td>
+                  <td>- 3.60</td>
+                  <td><b style="color:greenyellow">+ 4.05</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>- 3.91</td>
+                  <td>+ 8.22</td>
+                  <td><b style="color:lightcoral">- 12.13</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 7.27</td>
+                  <td>- 3.09</td>
+                  <td><b style="color:greenyellow">+ 10.36</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>- 3.75</td>
+                  <td>- 5.63</td>
+                  <td><b style="color:greenyellow">+ 1.88</b></td>
+                </tr>
+              </table>              
                 `,
             location: {
                 center: [-122.3877, 37.7667],
@@ -874,8 +2574,77 @@ var config = {
             alignment: 'left',
             title: 'LOS ANGELES CLIPPERS',
             description: `
-                Staples Center
-                <img src="./images/clippers.png">            
+                Venue: Staples Center<br>
+                Time Zone: Pacific
+                <img src="./images/clippers.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>- 4.02</td>
+                  <td>- 8.02</td>
+                  <td><b style="color:greenyellow">+ 4.00</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 6.33</td>
+                  <td>- 1.69</td>
+                  <td><b style="color:greenyellow">+ 8.02</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 14.40</td>
+                  <td>- 6.80</td>
+                  <td><b style="color:lightcoral">- 7.60</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>+ 6.20</td>
+                  <td>+ 0.80</td>
+                  <td><b style="color:greenyellow">+ 5.40</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 6.33</td>
+                  <td>- 18.33</td>
+                  <td><b style="color:greenyellow">+ 24.66</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>+ 6.33</td>
+                  <td>- 18.33</td>
+                  <td><b style="color:greenyellow">+ 24.66</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 0.36</td>
+                  <td>- 4.73</td>
+                  <td><b style="color:greenyellow">+ 5.09</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 5.73</td>
+                  <td>+ 7.11</td>
+                  <td><b style="color:lightcoral">- 1.38</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>- 5.27</td>
+                  <td>- 8.55</td>
+                  <td><b style="color:greenyellow">+ 3.28</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 6.76</td>
+                  <td>- 3.89</td>
+                  <td><b style="color:greenyellow">+ 10.65</b></td>
+                </tr>
+              </table>            
                 `,
             location: {
                 center: [-118.2688, 34.0430],
@@ -887,15 +2656,87 @@ var config = {
                 layer: 'staples-center',
                 opacity: 0.5
             }, ],
-            onChapterExit: []
+            onChapterExit: [{
+                layer: 'staples-center',
+                opacity: 0
+            }]
         },
         {
             id: 'lal',
             alignment: 'left',
             title: 'LOS ANGELES LAKERS',
             description: `
-                Staples Center
-                <img src="./images/lakers.png">            
+                Venue: Staples Center<br>
+                Time Zone: Pacific
+                <img src="./images/lakers.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 6.78</td>
+                  <td>+ 2.10</td>
+                  <td><b style="color:greenyellow">+ 4.68</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 3.00</td>
+                  <td>- 0.08</td>
+                  <td><b style="color:greenyellow">+ 3.08</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 3.00</td>
+                  <td>+ 3.40</td>
+                  <td><b style="color:lightcoral">- 6.40</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 2.40</td>
+                  <td>+ 2.40</td>
+                  <td><b style="color:lightcoral">- 4.80</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>- 9.67</td>
+                  <td>- 3.00</td>
+                  <td><b style="color:lightcoral">- 6.67</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>+ 6.00</td>
+                  <td>- 1.67</td>
+                  <td><b style="color:greenyellow">+ 7.67</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 4.80</td>
+                  <td>+ 5.40</td>
+                  <td><b style="color:lightcoral">- 0.60</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 3.00</td>
+                  <td>+ 3.82</td>
+                  <td><b style="color:lightcoral">- 0.82</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 11.91</td>
+                  <td>+ 1.04</td>
+                  <td><b style="color:greenyellow">+ 10.87</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 3.95</td>
+                  <td>- 3.06</td>
+                  <td><b style="color:greenyellow">+ 7.01</b></td>
+                </tr>
+              </table>            
                 `,
             location: {
                 center: [-118.2688, 34.0430],
@@ -903,7 +2744,10 @@ var config = {
                 pitch: 64,
                 bearing: 8
             },
-            onChapterEnter: [],
+            onChapterEnter: [{
+                layer: 'staples-center',
+                opacity: 0.5
+            }, ],
             onChapterExit: [{
                 layer: 'staples-center',
                 opacity: 0
@@ -914,8 +2758,77 @@ var config = {
             alignment: 'left',
             title: 'PORTLAND TRAIL BLAZERS',
             description: `
-                Moda Center
-                <img src="./images/blazers.png">            
+                Venue: Moda Center<br>
+                Time Zone: Pacific
+                <img src="./images/blazers.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 2.54</td>
+                  <td>+ 2.68</td>
+                  <td><b style="color:greenyellow">+ 5.22</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 6.44</td>
+                  <td>+ 2.56</td>
+                  <td><b style="color:greenyellow">+ 3.88</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>+ 1.20</td>
+                  <td>- 3.20</td>
+                  <td><b style="color:greenyellow">+ 4.40</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 1.00</td>
+                  <td>+ 9.40</td>
+                  <td><b style="color:lightcoral">- 10.40</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 1.00</td>
+                  <td>+ 2.67</td>
+                  <td><b style="color:lightcoral">- 1.67</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>+ 16.33</td>
+                  <td>- 6.67</td>
+                  <td><b style="color:greenyellow">+ 23.00</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>- 0.82</td>
+                  <td>- 0.64</td>
+                  <td><b style="color:lightcoral">- 0.18</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 4.22</td>
+                  <td>+ 6.18</td>
+                  <td><b style="color:lightcoral">- 1.96</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 4.73</td>
+                  <td>- 4.32</td>
+                  <td><b style="color:greenyellow">+ 9.05</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 7.89</td>
+                  <td>- 0.18</td>
+                  <td><b style="color:greenyellow">+ 8.07</b></td>
+                </tr>
+              </table>            
                 `,
             location: {
                 center: [-122.6677, 45.5322],
@@ -937,8 +2850,77 @@ var config = {
             alignment: 'left',
             title: 'SACRAMENTO KINGS',
             description: `
-                Golden 1 Center
-                <img src="./images/kings.png">            
+                Venue: Golden 1 Center<br>
+                Time Zone: Pacific
+                <img src="./images/kings.png">
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>- 9.80</td>
+                  <td>- 7.02</td>
+                  <td><b style="color:lightcoral">- 2.78</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>- 1.69</td>
+                  <td>- 0.08</td>
+                  <td><b style="color:lightcoral">- 1.61</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 17.00</td>
+                  <td>- 18.00</td>
+                  <td><b style="color:greenyellow">+ 1.00</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 4.80</td>
+                  <td>- 4.00</td>
+                  <td><b style="color:lightcoral">- 0.80</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>- 8.00</td>
+                  <td>- 7.67</td>
+                  <td><b style="color:lightcoral">- 0.33</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>- 13.33</td>
+                  <td>- 5.33</td>
+                  <td><b style="color:lightcoral">- 8.00</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>- 6.00</td>
+                  <td>- 9.56</td>
+                  <td><b style="color:greenyellow">+ 3.56</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 3.78</td>
+                  <td>- 2.88</td>
+                  <td><b style="color:greenyellow">+ 6.66</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>- 9.96</td>
+                  <td>- 3.71</td>
+                  <td><b style="color:lightcoral">- 6.51</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>- 1.63</td>
+                  <td>+ 2.80</td>
+                  <td><b style="color:lightcoral">- 4.43</b></td>
+                </tr>
+              </table>             
                 `,
             location: {
                 center: [-121.5005, 38.5811],
@@ -952,6 +2934,365 @@ var config = {
             }, ],
             onChapterExit: [{
                 layer: 'golden-1-center',
+                opacity: 0
+            }]
+        },
+        {
+            id: 'eastern',
+            alignment: 'left',
+            title: 'EASTERN TIME ZONE',
+            description: `
+                # of Teams: 13
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 1.68</td>
+                  <td>- 3.54</td>
+                  <td><b style="color:greenyellow">+ 5.22</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 0.75</td>
+                  <td>- 2.49</td>
+                  <td><b style="color:greenyellow">+ 3.24</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 2.14</td>
+                  <td>- 5.72</td>
+                  <td><b style="color:greenyellow">+ 3.58</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 2.74</td>
+                  <td>- 2.78</td>
+                  <td><b style="color:greenyellow">+ 0.04</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 1.15</td>
+                  <td>- 3.82</td>
+                  <td><b style="color:greenyellow">+ 4.97</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>- 2.05</td>
+                  <td>- 13.31</td>
+                  <td><b style="color:greenyellow">+ 11.26</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 0.39</td>
+                  <td>- 3.06</td>
+                  <td><b style="color:greenyellow">+ 3.45</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>- 0.41</td>
+                  <td>+ 1.74</td>
+                  <td><b style="color:lightcoral">- 2.15</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 3.21</td>
+                  <td>- 3.24</td>
+                  <td><b style="color:greenyellow">+ 6.45</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 2.90</td>
+                  <td>- 2.90</td>
+                  <td><b style="color:greenyellow">+ 5.80</b></td>
+                </tr>
+              </table>           
+                `,
+            location: {
+                center: [-88, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [{
+                layer: 'eastern',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'eastern',
+                opacity: 0
+            }]
+        },
+        {
+            id: 'central',
+            alignment: 'left',
+            title: 'CENTRAL TIME ZONE',
+            description: `
+                # of Teams: 9
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 2.88</td>
+                  <td>- 2.07</td>
+                  <td><b style="color:greenyellow">+ 4.95</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>- 2.55</td>
+                  <td>- 1.47</td>
+                  <td><b style="color:lightcoral">- 1.08</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>+ 2.30</td>
+                  <td>- 4.37</td>
+                  <td><b style="color:greenyellow">+ 6.67</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>- 2.62</td>
+                  <td>- 4.36</td>
+                  <td><b style="color:greenyellow">+ 1.74</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 3.71</td>
+                  <td>- 3.42</td>
+                  <td><b style="color:greenyellow">+ 7.13</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>- 9.70</td>
+                  <td>- 6.64</td>
+                  <td><b style="color:lightcoral">- 3.06</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 2.23</td>
+                  <td>- 2.22</td>
+                  <td><b style="color:greenyellow">+ 4.45</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>- 0.15</td>
+                  <td>+ 0.28</td>
+                  <td><b style="color:lightcoral">- 0.44</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 3.25</td>
+                  <td>- 0.52</td>
+                  <td><b style="color:greenyellow">+ 3.77</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>- 2.43</td>
+                  <td>+ 0.24</td>
+                  <td><b style="color:lightcoral">- 2.67</b></td>
+                </tr>
+              </table>              
+                `,
+            location: {
+                center: [-103, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [{
+                layer: 'central',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'central',
+                opacity: 0
+            }]
+        },{
+            id: 'mountain',
+            alignment: 'left',
+            title: 'MOUNTAIN TIME ZONE',
+            description: `
+                # of Teams: 3
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 4.02</td>
+                  <td>- 4.11</td>
+                  <td><b style="color:greenyellow">+ 8.13</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 9.43</td>
+                  <td>+ 3.78</td>
+                  <td><b style="color:greenyellow">+ 5.65</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>+ 2.48</td>
+                  <td>- 5.30</td>
+                  <td><b style="color:greenyellow">+ 7.78</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>+ 9.80</td>
+                  <td>+ 1.01</td>
+                  <td><b style="color:greenyellow">+ 8.79</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 9.75</td>
+                  <td>- 9.75</td>
+                  <td>0.00</td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>+ 0.86</td>
+                  <td>+ 0.22</td>
+                  <td><b style="color:greenyellow">+ 0.64</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 3.60</td>
+                  <td>- 4.39</td>
+                  <td><b style="color:greenyellow">+ 7.99</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 7.01</td>
+                  <td>+ 9.65</td>
+                  <td><b style="color:lightcoral">- 2.64</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 3.82</td>
+                  <td>- 1.15</td>
+                  <td><b style="color:greenyellow">+ 4.97</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 13.31</td>
+                  <td>+ 2.05</td>
+                  <td><b style="color:greenyellow">+ 11.26</b></td>
+                </tr>
+              </table>              
+                `,
+            location: {
+                center: [-118, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [{
+                layer: 'mountain',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'mountain',
+                opacity: 0
+            }]
+        },
+        {
+            id: 'pacific',
+            alignment: 'left',
+            title: 'PACIFIC TIME ZONE',
+            description: `
+                # of Teams: 5
+                <table style="width:100%" id="t">
+                <tr>
+                  <th></th>
+                  <th>Home</th>
+                  <th>Away</th>
+                  <th>Differential</th>
+                </tr>
+                <tr>
+                  <td>2018 - 19 Overall</td>
+                  <td>+ 3.91</td>
+                  <td>- 0.45</td>
+                  <td><b style="color:greenyellow">+ 4.36</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 Overall</td>
+                  <td>+ 3.28</td>
+                  <td>+ 0.53</td>
+                  <td><b style="color:greenyellow">+ 2.75</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Pacific</td>
+                  <td>- 0.50</td>
+                  <td>+ 0.45</td>
+                  <td><b style="color:lightcoral">- 0.95</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Pacific</td>
+                  <td>+ 2.22</td>
+                  <td>- 2.85</td>
+                  <td><b style="color:greenyellow">+ 5.07</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Mountain</td>
+                  <td>+ 5.57</td>
+                  <td>- 2.97</td>
+                  <td><b style="color:greenyellow">+ 8.54</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Mountain</td>
+                  <td>- 0.62</td>
+                  <td>- 10.80</td>
+                  <td><b style="color:greenyellow">+ 10.18</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Central</td>
+                  <td>+ 3.98</td>
+                  <td>- 2.47</td>
+                  <td><b style="color:greenyellow">+ 6.45</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Central</td>
+                  <td>+ 6.26</td>
+                  <td>+ 2.86</td>
+                  <td><b style="color:greenyellow">+ 3.40</b></td>
+                </tr>
+                <tr>
+                  <td>2018 - 19 vs Eastern</td>
+                  <td>+ 5.72</td>
+                  <td>+ 2.14</td>
+                  <td><b style="color:greenyellow">+ 7.86</b></td>
+                </tr>
+                <tr>
+                  <td>2020 - 21 vs Eastern</td>
+                  <td>+ 2.78</td>
+                  <td>+ 2.74</td>
+                  <td><b style="color:greenyellow">+ 0.04</b></td>
+                </tr>
+              </table>              
+                `,
+            location: {
+                center: [-133, 38],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [{
+                layer: 'pacific',
+                opacity: 0.5
+            }, ],
+            onChapterExit: [{
+                layer: 'pacific',
                 opacity: 0
             }]
         }
