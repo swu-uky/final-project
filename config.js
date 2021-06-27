@@ -4,7 +4,11 @@ var config = {
   showMarkers: false,
   markerColor: '#3FB1CE',
   theme: 'dark',
-  footer: 'Map Authored By: Shan Huan Wu',
+  footer: `Map Authored By: Shan Huan Wu<br>
+          Final Project of MAP 699 at the University of Kentucky<br>
+          Published June 2021<br>
+          <a href="https://github.com/swu-uky/pandemic-basketball" target="_blank">Project Repository</a>
+          `,
   chapters: [{
       id: 'first',
       alignment: 'left',
